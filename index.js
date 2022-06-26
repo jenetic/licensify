@@ -35,16 +35,15 @@ app.get('/login', (req, res) => {
   // scope
   const scope = 'user-read-private user-read-email';
 
-  const searchParams = new URLSearchParams({
+  const queryParams = new URLSearchParams({
     client_id: CLIENT_ID,
     response_type: 'code',
     redirect_uri: REDIRECT_URI,
     state: state,
     scope: scope,
-  });
-  const queryParams = searchParams.toString();
+  }).toString();
 
-  res.redirect(`https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=code&redirect_uri=${REDIRECT_URI}`);
+  res.redirect(`https://accounts.spotify.com/authorize?${queryParams}`);
 });
 
 app.get('/callback', (req, res) => {
@@ -66,21 +65,18 @@ app.get('/callback', (req, res) => {
   })
     .then(response => {
       if (response.status === 200) {
-        const { access_token, token_type } = response.data;
+        const { access_token, refresh_token } = response.data;
 
-        axios.get('https://api.spotify.com/v1/me', {
-          headers: {
-            Authorization: `${token_type} ${access_token}`,
-          }
-        })
-          .then(response => {
-            res.send(`<pre>${JSON.stringify(response.data, null, 2)}</pre>`);
-          })
-          .catch(error => {
-            res.send(error);
-          })
+        const queryParams = new URLSearchParams({
+          access_token,
+          refresh_token
+        }).toString();
+
+        // Redirect to React app & pass along tokens in query params
+        res.redirect(`http://localhost:3000/?${queryParams}`)
+       
       } else {
-        res.send(response);
+        res.redirect(`/?${new URLSearchParams({ error: 'invalid_token'}).toString()}`);
       }
     })
     .catch(error => {
@@ -113,4 +109,4 @@ app.get('/refresh_token', (req, res) => {
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
-});
+}); 
