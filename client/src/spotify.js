@@ -115,3 +115,20 @@ const getAccessToken = () => {
 };
 
 export const accessToken = getAccessToken();
+
+/**
+ * Axios global request headers
+ * https://gihub.com/axios/axios#global-axios-defaults
+ */
+axios.defaults.baseURL = 'https://api.spotify.com/v1';
+axios.defaults.headers['Authorization'] = `Bearer ${accessToken}`;
+axios.defaults.headers['Content-Type'] = 'application/json';
+
+/**
+ * Get current user's profile
+ * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-current-users-profile
+ * @returns {Promise}
+ * Since we set the base URL globally, the URL we use for our axios
+ * request only needs to be /me, not https://api.spotify.com/v1/me
+ */
+ export const getCurrentUserProfile = () => axios.get('/me');
