@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
 import { accessToken, logout, getCurrentUserProfile, getTopArtists } from './spotify';
 import { catchErrors } from './utils';
-import { Login } from './pages';
 import './App.css';
 
-function App() {
+const Profile = () => {
 
   const [token, setToken] = useState(null);
   const [profile, setProfile] = useState(null);
@@ -29,7 +28,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         {!token ? (
-          <Login />
+        <a
+          className="App-link"
+          href="http://localhost:8888/login"
+        >
+          Log into Spotify
+        </a>
         ) : (
           <>
             <h1>Logged in!</h1>
@@ -50,5 +54,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
