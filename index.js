@@ -33,7 +33,11 @@ app.get('/login', (req, res) => {
   res.cookie(stateKey, state);
 
   // scope
-  const scope = 'user-read-private user-read-email';
+  const scope = [
+    'user-read-private',
+    'user-read-email',
+    'user-top-read',
+  ].join(' ');
 
   const queryParams = new URLSearchParams({
     client_id: CLIENT_ID,

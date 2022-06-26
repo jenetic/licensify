@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { accessToken, logout, getCurrentUserProfile } from './spotify';
+import { accessToken, logout, getCurrentUserProfile, getTopArtists } from './spotify';
 import { catchErrors } from './utils';
 import logo from './logo.svg';
 import './App.css';
@@ -8,15 +8,21 @@ function App() {
 
   const [token, setToken] = useState(null);
   const [profile, setProfile] = useState(null);
+  const [topArtists, setTopArtists] = useState(null);
 
   useEffect(() => {
     setToken(accessToken);
 
-    const fetchData = async () => {
-      const { data } = await getCurrentUserProfile();
-      setProfile(data);
+    // Get user profile data
+    const fetchUserProfileData = async () => {
+      const userProfile = await getCurrentUserProfile();
+      setProfile(userProfile.data);
+      
+      const userTopArtists = await getTopArtists();
+      setTopArtists(userTopArtists.data);
     }
-    catchErrors(fetchData());
+
+    catchErrors(fetchUserProfileData());
   }, [])
 
   return (

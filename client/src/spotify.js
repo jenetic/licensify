@@ -132,3 +132,12 @@ axios.defaults.headers['Content-Type'] = 'application/json';
  * request only needs to be /me, not https://api.spotify.com/v1/me
  */
  export const getCurrentUserProfile = () => axios.get('/me');
+
+ /**
+  * Get current user's top artists
+  * https://developer.spotify.com/documentation/web-api/reference/#/operations/get-users-top-artists-and-tracks
+  * @returns {Promise}
+  */
+ export const getTopArtists = (time_range = 'medium_term') => {
+  return axios.get(`/me/top/artists?time_range=${time_range}`);
+ };
