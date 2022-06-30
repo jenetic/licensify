@@ -1,52 +1,38 @@
 import { useEffect, useState } from 'react';
 import { accessToken, logout, getCurrentUserProfile, getTopArtists } from './spotify';
 import { catchErrors } from './utils';
-import { Login } from './pages';
-import './App.css';
+import { Login, Profile } from './pages';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import './App.css'; 
 
 function App() {
 
   const [token, setToken] = useState(null);
-  const [profile, setProfile] = useState(null);
-  const [topArtists, setTopArtists] = useState(null);
 
   useEffect(() => {
     setToken(accessToken);
-
-    // Get user profile data
-    const fetchUserProfileData = async () => {
-      const userProfile = await getCurrentUserProfile();
-      setProfile(userProfile.data);
-      
-      const userTopArtists = await getTopArtists();
-      setTopArtists(userTopArtists.data);
-    }
-
-    catchErrors(fetchUserProfileData());
   }, [])
 
   return (
     <div className="App">
-      <header className="App-header">
-        {!token ? (
-          <Login />
-        ) : (
-          <>
-            <h1>Logged in!</h1>
-            <button onClick={logout}>Log Out</button>
+      {!token ? (
+        <Login />
+      ) : (
+        <>
+          <button onClick={logout}>Log Out</button>
 
-            {profile && (
-              <div>
-                <h1>{profile.display_name}</h1>
-                <p>{profile.followers.total} Followers</p>
-                {profile.images.length && profile.images[0].url && (
-                  <img src={profile.images[0].url} alt="Profile Picture" />
-                )}
-              </div>
-            )}
-          </>
-        )}
-      </header>
+          {/* Router */}
+          <Router>
+            <Routes>
+              <Route path="/" element={<Profile />} />
+            </Routes>
+          </Router>
+        </>
+      )}
     </div>
   );
 }
