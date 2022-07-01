@@ -131,13 +131,45 @@ axios.defaults.headers['Content-Type'] = 'application/json';
  * Since we set the base URL globally, the URL we use for our axios
  * request only needs to be /me, not https://api.spotify.com/v1/me
  */
- export const getCurrentUserProfile = () => axios.get('/me');
+export const getCurrentUserProfile = () => axios.get('/me');
 
- /**
-  * Get current user's top artists
-  * https://developer.spotify.com/documentation/web-api/reference/#/operations/get-users-top-artists-and-tracks
-  * @returns {Promise}
-  */
- export const getTopArtists = (time_range = 'medium_term') => {
+/**
+* Get current user's top artists
+* https://developer.spotify.com/documentation/web-api/reference/#/operations/get-users-top-artists-and-tracks
+* @returns {Promise}
+*/
+export const getTopArtists = (time_range = 'medium_term') => {
   return axios.get(`/me/top/artists?time_range=${time_range}`);
- };
+};
+
+/**
+* Get current user's top tracks
+* https://developer.spotify.com/documentation/web-api/reference/#/operations/get-users-top-artists-and-tracks
+* @returns {Promise}
+*/
+export const getTopTracks = (time_range = 'medium_term') => {
+  return axios.get(`/me/top/tracks?time_range=${time_range}`);
+};
+
+export const getTopGenre = async () => {
+  const topArtists = await getTopArtists();
+  console.log(topArtists.data.items);
+  
+  let genreDict = {};
+
+  const artistsList = topArtists.data.items;
+
+  artistsList.forEach(artist => {
+    artist.genres.forEach(genre => {
+      if (genre in genreDict) {
+        genreDict[genre] += 1;
+      } else {
+        genreDict[genre] = 1;
+      }
+    })
+  })
+  const maxGenre = Object.entries(genreDict).sort((x, y) => y[1] - x[1])[0][0];
+  console.log(maxGenre);
+  return maxGenre;
+}
+
