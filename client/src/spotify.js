@@ -62,7 +62,7 @@ const refreshToken = async () => {
       // Use `/refresh_token` endpoint from Node app
       const { data } = await axios.get(`/refresh_token?refresh_token=${LOCALSTORAGE_VALUES.refreshToken}`);
 
-      // Update localStorage values
+      // Update localStoragetge values
       window.localStorage.setItem(LOCALSTORAGE_KEYS.accessToken, data.access_token);
       window.localStorage.setItem(LOCALSTORAGE_KEYS.timestamp, Date.now());
 
@@ -153,7 +153,6 @@ export const getTopTracks = (time_range = 'medium_term') => {
 
 export const getTopGenre = async () => {
   const topArtists = await getTopArtists();
-  console.log(topArtists.data.items);
   
   let genreDict = {};
 
@@ -169,7 +168,6 @@ export const getTopGenre = async () => {
     })
   })
   const maxGenre = Object.entries(genreDict).sort((x, y) => y[1] - x[1])[0][0];
-  console.log(maxGenre);
   return maxGenre;
 }
 

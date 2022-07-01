@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { accessToken, logout, getCurrentUserProfile, getTopArtists } from './spotify';
-import { catchErrors } from './utils';
+import { accessToken, logout } from './spotify';
 import { Login, Profile } from './pages';
 import {
   BrowserRouter as Router,
