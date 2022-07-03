@@ -151,8 +151,8 @@ export const getTopTracks = (time_range = 'medium_term') => {
   return axios.get(`/me/top/tracks?time_range=${time_range}`);
 };
 
-export const getTopGenre = async () => {
-  const topArtists = await getTopArtists();
+export const getTopGenre = async (time_range = 'medium_term') => {
+  const topArtists = await getTopArtists(time_range);
   
   let genreDict = {};
 
@@ -170,4 +170,3 @@ export const getTopGenre = async () => {
   const maxGenre = Object.entries(genreDict).sort((x, y) => y[1] - x[1])[0][0];
   return maxGenre;
 }
-
