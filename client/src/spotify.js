@@ -167,6 +167,14 @@ export const getTopGenre = async (time_range = 'medium_term') => {
       }
     })
   })
-  const maxGenre = Object.entries(genreDict).sort((x, y) => y[1] - x[1])[0][0];
-  return maxGenre;
+
+  const NUMBER_OF_GENRES = 3;
+  const sortedGenresWithCount = Object.entries(genreDict).sort((x, y) => y[1] - x[1]).slice(0, NUMBER_OF_GENRES);
+  
+  let sortedGenres = [];
+  sortedGenresWithCount.forEach((genre) => {
+    sortedGenres.push(genre[0])
+  });
+
+  return sortedGenres;
 }
