@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getCurrentUserProfile, getTopArtists, getTopTracks, getTopGenre } from '../spotify';
+import { getCurrentUserProfile, getTopArtists, getTopTracks, getTopGenres } from '../spotify';
 import { catchErrors } from '../utils';
 import '../App.css';
 
@@ -8,7 +8,7 @@ const Profile = () => {
   const [profile, setProfile] = useState(null);
   const [topArtist, setTopArtist] = useState("");
   const [topTrack, setTopTrack] = useState("");
-  const [topGenre, setTopGenre] = useState("");
+  const [topGenres, setTopGenres] = useState("");
 
   // Changes Spotify data to fit specified time range
   const changeTimeRange = async (time_range) => {
@@ -18,8 +18,8 @@ const Profile = () => {
     const userTopTracks = await getTopTracks(time_range);
     setTopTrack(userTopTracks.data.items[0].name);
 
-    const userTopGenre = await getTopGenre(time_range);
-    setTopGenre(userTopGenre);
+    const userTopGenres = await getTopGenres(time_range);
+    setTopGenres(userTopGenres);
   }
 
   useEffect(() => {
@@ -34,8 +34,8 @@ const Profile = () => {
       const userTopTracks = await getTopTracks();
       setTopTrack(userTopTracks.data.items[0].name);
 
-      const userTopGenre = await getTopGenre();
-      setTopGenre(userTopGenre);
+      const userTopGenres = await getTopGenres();
+      setTopGenres(userTopGenres);
     }
     catchErrors(fetchUserProfileData());
   }, [])
@@ -55,7 +55,9 @@ const Profile = () => {
           <p>{profile.id}</p>
           <p>{topArtist}</p>
           <p>{topTrack}</p>
-          <p>{topGenre}</p>
+          <p>{topGenres[0]}</p>
+          <p>{topGenres[1]}</p>
+          <p>{topGenres[2]}</p>
           {profile.images.length && profile.images[0].url && (
             <img src={profile.images[0].url} alt="Profile Picture" />
           )}
