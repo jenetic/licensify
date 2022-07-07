@@ -151,6 +151,27 @@ export const getTopTracks = (time_range = 'medium_term') => {
   return axios.get(`/me/top/tracks?time_range=${time_range}`);
 };
 
+/**
+ * Get track info given track ID
+ * @param {String} trackId 
+ * @returns {Promise}
+ */
+export const getTrack = (trackId) => {
+  return axios.get(`/tracks/${trackId}`);
+}
+
+export const getTopTrackAlbumCover = async (time_range = 'medium_term') => {
+  const topTracks = await getTopTracks(time_range);
+  const trackId = topTracks.data.items[0].id;
+  const track = await getTrack(trackId);
+  return track.data.album.images[0].url;
+}
+
+/**
+ * Get's user's top genres by counting up most frequent genre of top tracks
+ * @param {String} time_range 
+ * @returns array of top 3 genres
+ */
 export const getTopGenres = async (time_range = 'medium_term') => {
   const topArtists = await getTopArtists(time_range);
   
