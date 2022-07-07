@@ -1,9 +1,27 @@
-.rectangle {
+#cardRectangle {
   width: 506px;
-  height: 319px;
+  height: 320px;
   position: absolute;
+  z-index: 0;
 
   background-color: #FFFDEA;
   border-radius: 20px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+#backgroundCoverArt {
+  /* position: absolute; */
+  overflow: hidden;
+  clip-path: inset(93px 0px);
+}
+
+#backgroundCoverArt2 {
+  position: absolute;
+  background-position: center;
+  width: 506px;
+  height: 320px;
+  z-index: 1;
+
+  border-radius: 20px;
+  opacity: 0.12;
 }

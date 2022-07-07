@@ -10,3 +10,8 @@ export const catchErrors = fn => {
     })
   }
 }
+
+export const setCardBackgroundImage = imageUrl => {
+  document.getElementById("backgroundCoverArt2").style.backgroundImage = `url(${imageUrl})`;
+  // lol.style.opacity = "0.9";
+}

@@ -6,8 +6,9 @@ import {
   getTopGenres,
   getTopTrackAlbumCover
 } from '../spotify';
-import { catchErrors } from '../utils';
+import { catchErrors, setCardBackgroundImage } from '../utils';
 import '../Style.css';
+
 
 const Profile = () => {
 
@@ -65,7 +66,7 @@ const Profile = () => {
 
           {/* SPOTIFY INFORMATION */}
 
-          <h1>{profile.display_name}</h1>
+          {/* <h1>{profile.display_name}</h1>
           <p>{profile.followers.total} Followers</p>
           <p>{profile.id}</p>
           <p>{profile.country}</p>
@@ -77,10 +78,13 @@ const Profile = () => {
           {profile.images.length && profile.images[0].url && (
             <img src={profile.images[0].url} alt="Profile Picture" width="300" height="350"/>
           )}
-          <img src={topTrackAlbumCover}></img>
+          <img src={topTrackAlbumCover}></img> */}
 
           {/* CARD */}
-          <div className="rectangle"></div>
+          <div id="backgroundCoverArt2" style={{backgroundImage: `url(${topTrackAlbumCover})`}}></div>
+          <div id="cardRectangle"></div>
+          {/* <img id="bdsdackgroundCoverArt" src={topTrackAlbumCover} width="506px" height="506px"></img>  */}
+         
         </div>
       )}
     </>
