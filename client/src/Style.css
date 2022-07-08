@@ -1,7 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&family=Roboto:wght@500&display=swap');
+
+:root {
+  --dark-blue:#1B3C74;
+  --blue: #2D5395;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+hr {
+  z-index: 1;
+  margin: 0px 0px 10px;
+
+  color: #179E53;
+  border: 1.5px solid #179E53;
+}
+
 #cardRectangle {
   width: 506px;
   height: 320px;
-  position: absolute;
   z-index: 0;
 
   background-color: #FFFDEA;
@@ -10,7 +33,6 @@
 }
 
 #backgroundCoverArt {
-  position: absolute;
   background-position: center;
   width: 506px;
   height: 320px;
@@ -21,18 +43,72 @@
 }
 
 #mainProfilePicCrop {
-  position: absolute;
   height: 190px;
   width: 150px;
   overflow: hidden;
-  top: 100px;
+  top: 67px;
   left: 18px;
   z-index: 2;
 }
 
 #mainProfilePicCrop img {
-  position: absolute;
   height: 190px;
   margin: 0px 0px 0px -20px;
   opacity: 0.95;
+}
+
+#spotify {
+  top: 10px;
+  left: 20px;
+  z-index: 3;
+  
+  color: var(--dark-blue);
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.85rem;
+}
+
+#country {
+  top: 37px;
+  left: 167px;
+
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--blue);
+}
+
+#driver-license {
+  top: 18px;
+  left: 230px;
+
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--blue);
+}
+
+#topGreenLine {
+  top: 58px;
+  left: 45px;
+
+  width: 350px;
+}
+
+#bottomGreenLine {
+  top: 69px;
+  left: 175px;
+
+  width: 220px;
+}
+
+
+
+
+
+#card {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+#card > * {
+  position: absolute;
 }

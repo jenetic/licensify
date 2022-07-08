@@ -78,13 +78,21 @@ const Profile = () => {
           <img src={topTrackAlbumCover}></img> */}
 
           {/* CARD */}
-          <div id="cardRectangle"></div>
-          <div id="backgroundCoverArt" style={{backgroundImage: `url(${topTrackAlbumCover})`}}></div>
-          <div id="mainProfilePicCrop">
-            {profile.images.length && profile.images[0].url && (
-              <img src={profile.images[0].url}></img>
-            )}
+          <div id="card">
+            <div id="cardRectangle"></div>
+            <div id="backgroundCoverArt" style={{backgroundImage: `url(${topTrackAlbumCover})`}}></div>
+            <div id="mainProfilePicCrop">
+              {profile.images.length && profile.images[0].url && (
+                <img src={profile.images[0].url}></img>
+              )}
+            </div>
+            <p id="spotify">Spotify</p>
+            <p id="country">{profile.country}</p>
+            <p id="driver-license">DRIVER LICENSE</p>
+            <hr id="topGreenLine"/>
+            <hr id="bottomGreenLine"/>
           </div>
+          
           
         </div>
       )}
