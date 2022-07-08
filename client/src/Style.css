@@ -10,12 +10,6 @@
 }
 
 #backgroundCoverArt {
-  /* position: absolute; */
-  overflow: hidden;
-  clip-path: inset(93px 0px);
-}
-
-#backgroundCoverArt2 {
   position: absolute;
   background-position: center;
   width: 506px;
@@ -24,4 +18,21 @@
 
   border-radius: 20px;
   opacity: 0.12;
+}
+
+#mainProfilePicCrop {
+  position: absolute;
+  height: 190px;
+  width: 150px;
+  overflow: hidden;
+  top: 100px;
+  left: 18px;
+  z-index: 2;
+}
+
+#mainProfilePicCrop img {
+  position: absolute;
+  height: 190px;
+  margin: 0px 0px 0px -20px;
+  opacity: 0.95;
 }

@@ -75,16 +75,17 @@ const Profile = () => {
           <p>{topGenres[0]}</p>
           <p>{topGenres[1]}</p>
           <p>{topGenres[2]}</p>
-          {profile.images.length && profile.images[0].url && (
-            <img src={profile.images[0].url} alt="Profile Picture" width="300" height="350"/>
-          )}
           <img src={topTrackAlbumCover}></img> */}
 
           {/* CARD */}
-          <div id="backgroundCoverArt2" style={{backgroundImage: `url(${topTrackAlbumCover})`}}></div>
           <div id="cardRectangle"></div>
-          {/* <img id="bdsdackgroundCoverArt" src={topTrackAlbumCover} width="506px" height="506px"></img>  */}
-         
+          <div id="backgroundCoverArt" style={{backgroundImage: `url(${topTrackAlbumCover})`}}></div>
+          <div id="mainProfilePicCrop">
+            {profile.images.length && profile.images[0].url && (
+              <img src={profile.images[0].url}></img>
+            )}
+          </div>
+          
         </div>
       )}
     </>
