@@ -194,7 +194,7 @@ export const getTopGenres = async (time_range = 'medium_term') => {
   
   let sortedGenres = [];
   sortedGenresWithCount.forEach((genre) => {
-    sortedGenres.push(genre[0])
+    sortedGenres.push(genre[0].toUpperCase());
   });
 
   return sortedGenres;

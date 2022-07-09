@@ -6,7 +6,12 @@ import {
   getTopGenres,
   getTopTrackAlbumCover
 } from '../spotify';
-import { catchErrors, setCardBackgroundImage } from '../utils';
+import { 
+  catchErrors,
+  getCurrentDate, 
+  getLastName,
+  getFirstName,
+} from '../utils';
 import '../Style.css';
 
 
@@ -81,16 +86,60 @@ const Profile = () => {
           <div id="card">
             <div id="cardRectangle"></div>
             <div id="backgroundCoverArt" style={{backgroundImage: `url(${topTrackAlbumCover})`}}></div>
-            <div id="mainProfilePicCrop">
-              {profile.images.length && profile.images[0].url && (
-                <img src={profile.images[0].url}></img>
-              )}
+            
+            <div id="mainProfilePicAndSignature">
+              <div id="mainProfilePicCrop">
+                {profile.images.length && profile.images[0].url && (
+                  <img src={profile.images[0].url}></img>
+                )}
+              </div>
+              <p id="signature">{profile.display_name}</p>
             </div>
+            
+           
+
             <p id="spotify">Spotify</p>
             <p id="country">{profile.country}</p>
             <p id="driver-license">DRIVER LICENSE</p>
+            <p id="federal-limits-apply">FEDERAL LIMITS APPLY</p>
+
+
             <hr id="topGreenLine"/>
-            <hr id="bottomGreenLine"/>
+            <hr id="bottomGreenLine" className="topSection"/>
+
+            <p id="dlKey" className="sectionKey topSection">DL</p>
+            <p id="dlValue">{profile.id.toUpperCase()}</p>
+
+            <p id="dateKey" className="sectionKey topSection">EXP</p>
+            <p id="dateValue">{getCurrentDate()}</p>
+            
+            <p id="lnKey" className="sectionKey topSection">LN</p>
+            <p id="lnValue" className="sectionValue">{getLastName(profile.display_name).toUpperCase()}</p>
+
+            <p id="fnKey" className="sectionKey topSection">FN</p>
+            <p id="fnValue" className="sectionValue">{getFirstName(profile.display_name).toUpperCase()}</p>
+
+            <p id="trackKey" className="sectionKey topSection">#1 SONG</p>
+            <p id="trackValue" className="sectionValue">{topTrack.name}</p>
+
+            <p id="artistKey" className="sectionKey topSection">#1 ARTIST</p>
+            <p id="artistValue" className="sectionValue">{topArtist.toUpperCase()}</p>
+
+            <p id="followersKey" className="sectionKey">FOLLOWERS</p>
+            <p id="followersValue" className="sectionValue">{profile.followers.total}</p>
+
+            <p id="genresKey" className="sectionKey">TOP GENRES</p>
+            <p id="genresValue" className="sectionValue">
+              <span>{topGenres[0]}</span>
+              <span>{topGenres[1]}</span>
+              <br/>
+              <span>{topGenres[2]}</span>
+            </p>
+
+            {profile.images.length && profile.images[0].url && (
+              <img id="smallProfilePic" src={profile.images[0].url}></img>
+            )}
+
           </div>
           
           

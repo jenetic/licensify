@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Inter:wght@200;400;700&family=Roboto+Condensed&family=Roboto:wght@500&display=swap');
 
 :root {
   --dark-blue:#1B3C74;
   --blue: #2D5395;
+  --black: black;
+  --red: #C74528;
 }
 
 body {
   font-family: 'Inter', sans-serif;
+  font-weight: bold;
 }
 
 p {
@@ -20,6 +23,21 @@ hr {
 
   color: #179E53;
   border: 1.5px solid #179E53;
+}
+
+.sectionKey {
+  font-size: 0.9rem;
+  color: var(--blue);
+}
+
+.topSection {
+  left: 175px;
+}
+
+.sectionValue {
+  z-index: 3;
+  font-size: 1.1rem;
+  color: var(--black);
 }
 
 #cardRectangle {
@@ -42,12 +60,19 @@ hr {
   opacity: 0.12;
 }
 
+#mainProfilePicAndSignature {
+  top: 67px;
+  left: 18px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #mainProfilePicCrop {
   height: 190px;
   width: 150px;
   overflow: hidden;
-  top: 67px;
-  left: 18px;
   z-index: 2;
 }
 
@@ -72,7 +97,6 @@ hr {
   left: 167px;
 
   font-size: 0.9rem;
-  font-weight: bold;
   color: var(--blue);
 }
 
@@ -81,8 +105,18 @@ hr {
   left: 230px;
 
   font-size: 1.1rem;
-  font-weight: bold;
   color: var(--blue);
+}
+
+#federal-limits-apply {
+  top: 32px;
+  left: 405px;
+
+  font-size: 1rem;
+  font-weight: normal;
+  width: 1px;
+  line-height: 1rem;
+  color: var(--black);
 }
 
 #topGreenLine {
@@ -94,14 +128,118 @@ hr {
 
 #bottomGreenLine {
   top: 69px;
-  left: 175px;
 
   width: 220px;
 }
 
 
+#dlKey {
+  top: 95px;
+}
 
+#dlValue {
+  top: 89px;
+  left: 198px;
 
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.4rem;
+  color: var(--red);
+}
+
+#dateKey {
+  top: 121px;
+}
+
+#dateValue {
+  top: 117px;
+  left: 207px;
+
+  font-size: 1.2rem;
+  color: var(--red);
+}
+
+#lnKey {
+  top: 148px;
+}
+
+#lnValue {
+  top: 146px;
+  left: 200px;
+}
+
+#fnKey {
+  top: 170px;
+}
+
+#fnValue {
+  top: 167.5px;
+  left: 200px;
+}
+
+#trackKey {
+  top: 194px;
+}
+
+#trackValue {
+  top: 191.5px;
+  left: 243px;
+}
+
+#artistKey {
+  top: 218px;
+}
+
+#artistValue {
+  top: 215.5px;
+  left: 252px;
+}
+
+#followersKey {
+  top: 121px;
+  left: 335px;
+}
+
+#followersValue {
+  top: 121px;
+  left: 428px;
+
+  font-size: 0.9rem;
+}
+
+#genresKey {
+  top: 276px;
+  left: 209px;
+
+  width: 1px;
+  line-height: 0.9rem;
+}
+
+#genresValue {
+  top: 271px;
+  left: 275px;
+  font-size: 0.9rem;
+  width: 200px;
+  height: 30px;
+}
+
+#genresValue span {
+  margin: 0px 40px 0px 0px;
+}
+
+#signature {
+  font-family: 'Allison', cursive;
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+#smallProfilePic {
+  top: 210px;
+  left: 300px;
+  z-index: 2;
+
+  height: 77px;
+  opacity: 0.4;
+}
 
 #card {
   position: relative;
