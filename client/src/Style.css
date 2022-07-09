@@ -63,28 +63,6 @@ hr {
   opacity: 0.12;
 }
 
-#mainProfilePicAndSignature {
-  top: 67px;
-  left: 18px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#mainProfilePicCrop {
-  height: 190px;
-  width: 150px;
-  overflow: hidden;
-  z-index: 2;
-}
-
-#mainProfilePicCrop img {
-  height: 190px;
-  margin: 0px 0px 0px -20px;
-  opacity: 0.95;
-}
-
 #licensify {
   top: 17.5px;
   left: 20px;
@@ -101,6 +79,8 @@ hr {
 
   font-size: 0.9rem;
   color: var(--blue);
+  width: 215px;
+  overflow: hidden;
 }
 
 #driver-license {
@@ -135,6 +115,39 @@ hr {
 
   width: 220px;
 }
+#mainProfilePicAndSignature {
+  top: 67px;
+  left: 18px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#mainProfilePicCrop {
+  height: 190px;
+  width: 150px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+#mainProfilePicCrop img {
+  height: 190px;
+  margin: 0px 0px 0px -20px;
+  opacity: 0.95;
+}
+
+#signature {
+  font-family: 'Allison', cursive;
+  font-size: 2rem;
+  opacity: 0.8;
+  margin-top: 10px;
+  padding: 5px 0px 0px 5px;
+  width: 160px;
+  height: 40px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  line-height: 1rem;
+}
 
 #topSection {
   top: 88px;
@@ -146,7 +159,7 @@ hr {
 }
 
 #topSection > * {
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 #dlKey {
@@ -155,6 +168,7 @@ hr {
 
 #dlValue {
   font-family: 'Roboto Condensed', sans-serif;
+  margin-top: 4px;
   font-size: 1.4rem;
   width: 300px;
   line-height: 1.1rem; 
@@ -197,6 +211,10 @@ hr {
   overflow: hidden;
 }
 
+#trackKey, #artistKey {
+  width: 80px;
+}
+
 #trackValue, #artistValue {
   width: 250px;
 }
@@ -223,12 +241,6 @@ hr {
   margin: 0px 40px 0px 0px;
   word-break: keep-all;
   white-space: pre;
-}
-
-#signature {
-  font-family: 'Allison', cursive;
-  font-size: 2rem;
-  opacity: 0.8;
 }
 
 #smallProfilePic {

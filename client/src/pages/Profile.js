@@ -119,7 +119,7 @@ const Profile = () => {
             <div id="topSection" className="flexWrapper">
               <div id="dl" className="flexWrapper">
                 <p id="dlKey" className="sectionKey">DL</p>
-                <p id="dlValue">WWWWWWWWWWWWWWWWWWWWWW</p>
+                <p id="dlValue">{profile.id.toUpperCase()}</p>
               </div>
               
               <div id="expAndFollowersWrapper" className="flexWrapper">
@@ -145,11 +145,11 @@ const Profile = () => {
               <div id="trackAndArtistWrapper" className="flexWrapper">
                 <div id="track" className="flexWrapper">
                   <p id="trackKey" className="sectionKey">#1 TRACK</p>
-                  <p id="trackValue" className="sectionValue">WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW</p>
+                  <p id="trackValue" className="sectionValue">{topTrack.name}</p>
                 </div>
                 <div id="artist" className="flexWrapper"> 
                   <p id="artistKey" className="sectionKey">#1 ARTIST</p>
-                  <p id="artistValue" className="sectionValue">WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW</p>
+                  <p id="artistValue" className="sectionValue">{topArtist.toUpperCase()}</p>
                 </div>
               </div>
             </div>
@@ -157,7 +157,6 @@ const Profile = () => {
             <div id="genres" className="flexWrapper">
               <p id="genresKey" className="sectionKey">TOP GENRES</p>
               <p id="genresValue" className="sectionValue">
-                {/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */}
                 <span>{topGenres[0]}</span>
                 <span>{topGenres[1]}</span>
                 <span>{topGenres[2]}</span>
