@@ -114,42 +114,59 @@ const Profile = () => {
 
 
             <hr id="topGreenLine"/>
-            <hr id="bottomGreenLine" className="topSection"/>
+            <hr id="bottomGreenLine"/>
 
-            <p id="dlKey" className="sectionKey topSection">DL</p>
-            <p id="dlValue">{profile.id.toUpperCase()}</p>
-
-            <p id="dateKey" className="sectionKey topSection">EXP</p>
-            <p id="dateValue">{getCurrentDate()}</p>
-            
-            <p id="lnKey" className="sectionKey topSection">LN</p>
-            <p id="lnValue" className="sectionValue">{getLastName(profile.display_name).toUpperCase()}</p>
-
-            <p id="fnKey" className="sectionKey topSection">FN</p>
-            <p id="fnValue" className="sectionValue">{getFirstName(profile.display_name).toUpperCase()}</p>
-
-            <div id="trackAndArtistWrapper">
-              <div id="track">
-                <p id="trackKey" className="sectionKey topSection">#1 TRACK</p>
-                <p id="trackValue" className="sectionValue">{topTrack.name}</p>
+            <div id="topSection" className="flexWrapper">
+              <div id="dl" className="flexWrapper">
+                <p id="dlKey" className="sectionKey">DL</p>
+                <p id="dlValue">WWWWWWWWWWWWWWWWWWWWWW</p>
               </div>
-              <div id="artist">
-                <p id="artistKey" className="sectionKey topSection">#1 ARTIST</p>
-                <p id="artistValue" className="sectionValue">{topArtist.toUpperCase()}</p>
+              
+              <div id="expAndFollowersWrapper" className="flexWrapper">
+                <p id="expKey" className="sectionKey">EXP</p>
+                <p id="expValue">{getCurrentDate()}</p>
+
+                <p id="followersKey" className="sectionKey">FOLLOWERS</p>
+                <p id="followersValue" className="sectionValue">{profile.followers.total}</p>
+              </div>
+
+              <div id="nameWrapper" className="flexWrapper">
+                <div id="ln" className="flexWrapper">
+                  <p id="lnKey" className="sectionKey">LN</p>
+                  <p id="lnValue" className="sectionValue">{getLastName(profile.display_name).toUpperCase()}</p>
+                </div>
+
+                <div id="fn" className="flexWrapper">
+                    <p id="fnKey" className="sectionKey">FN</p>
+                    <p id="fnValue" className="sectionValue">{getFirstName(profile.display_name).toUpperCase()}</p>
+                </div>
+              </div>
+
+              <div id="trackAndArtistWrapper" className="flexWrapper">
+                <div id="track" className="flexWrapper">
+                  <p id="trackKey" className="sectionKey">#1 TRACK</p>
+                  <p id="trackValue" className="sectionValue">WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW</p>
+                </div>
+                <div id="artist" className="flexWrapper"> 
+                  <p id="artistKey" className="sectionKey">#1 ARTIST</p>
+                  <p id="artistValue" className="sectionValue">WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW</p>
+                </div>
               </div>
             </div>
+          
+            <div id="genres" className="flexWrapper">
+              <p id="genresKey" className="sectionKey">TOP GENRES</p>
+              <p id="genresValue" className="sectionValue">
+                {/* WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */}
+                <span>{topGenres[0]}</span>
+                <span>{topGenres[1]}</span>
+                <span>{topGenres[2]}</span>
+              </p>
+            </div>
+
            
 
-            <p id="followersKey" className="sectionKey">FOLLOWERS</p>
-            <p id="followersValue" className="sectionValue">{profile.followers.total}</p>
-
-            <p id="genresKey" className="sectionKey">TOP GENRES</p>
-            <p id="genresValue" className="sectionValue">
-              <span>{topGenres[0]}</span>
-              <span>{topGenres[1]}</span>
-              <br/>
-              <span>{topGenres[2]}</span>
-            </p>
+            
 
             {profile.images.length && profile.images[0].url && (
               <img id="smallProfilePic" src={profile.images[0].url}></img>

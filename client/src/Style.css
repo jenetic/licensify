@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Arial', sans-serif;
   font-weight: bold;
 }
 
@@ -27,18 +27,20 @@ hr {
 
 .sectionKey {
   font-size: 0.9rem;
+  margin-right: 5px;
   color: var(--blue);
-}
-
-.topSection {
-  left: 175px;
 }
 
 .sectionValue {
   z-index: 3;
   font-size: 1.1rem;
   line-height: 1rem;
+  overflow-wrap: break-word;
   color: var(--black);
+}
+
+.flexWrapper {
+  display: flex;
 }
 
 #cardRectangle {
@@ -129,103 +131,98 @@ hr {
 
 #bottomGreenLine {
   top: 69px;
+  left: 175px;
 
   width: 220px;
 }
 
+#topSection {
+  top: 88px;
+  left: 175px;
+
+  flex-direction: column;
+  width: 315px;
+  
+}
+
+#topSection > * {
+  margin-bottom: 5px;
+}
 
 #dlKey {
-  top: 95px;
+  margin-top: 8px;
 }
 
 #dlValue {
-  top: 89px;
-  left: 198px;
-
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 1.4rem;
+  width: 300px;
+  line-height: 1.1rem; 
+  overflow-wrap: break-word;
   color: var(--red);
 }
 
-#dateKey {
-  top: 121px;
+#expAndFollowersWrapper {
+  margin-top: 4px;
 }
 
-#dateValue {
-  top: 117px;
-  left: 207px;
-
+#expValue {
+  margin: -4px 20px 0px 0px;
   font-size: 1.2rem;
   color: var(--red);
 }
 
-#lnKey {
-  top: 148px;
+#followersValue {
+  font-size: 0.9rem;
+  overflow-wrap: break-word;
+  width: 80px;
+  height: 1px;
 }
 
-#lnValue {
-  top: 146px;
-  left: 200px;
+#nameWrapper {
+  flex-direction: column;
 }
 
-#fnKey {
-  top: 170px;
-}
-
-#fnValue {
-  top: 167.5px;
-  left: 200px;
-}
-
-#trackAndArtistWrapper {
-  top: 194px;
-  left: 175px;
-
-  display: flex;
-  flex-direction: column; 
-  width: 315px;
-}
-
-#track, #artist {
-  display: flex;
-  max-height: 33.7px;
+#fn, #ln {
+  max-height: 15.7px;
   overflow: hidden;
 }
 
-#trackKey, #artistKey {
-  padding-right: 5px;
+#trackAndArtistWrapper {
+  flex-direction: column; 
 }
 
-#followersKey {
-  top: 121px;
-  left: 335px;
+#track, #artist {
+  max-height: 33.5px;
+  overflow: hidden;
 }
 
-#followersValue {
-  top: 121px;
-  left: 428px;
+#trackValue, #artistValue {
+  width: 250px;
+}
 
-  font-size: 0.9rem;
+#genres {
+  top: 275px;
+  left: 204px;
 }
 
 #genresKey {
-  top: 276px;
-  left: 209px;
-
-  width: 1px;
+  width: 63px;
   line-height: 0.9rem;
 }
 
 #genresValue {
-  top: 271px;
-  left: 275px;
   font-size: 0.9rem;
-  width: 200px;
+  width: 225px;
   height: 30px;
+  
+  overflow: hidden;
 }
 
 #genresValue span {
   margin: 0px 40px 0px 0px;
+  word-break: keep-all;
+  white-space: pre;
 }
 
 #signature {
