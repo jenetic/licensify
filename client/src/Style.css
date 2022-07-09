@@ -108,13 +108,13 @@ hr {
   color: var(--blue);
 }
 
-#federal-limits-apply {
+#display-time-range {
   top: 32px;
   left: 405px;
 
   font-size: 1rem;
   font-weight: normal;
-  width: 1px;
+  width: 60px;
   line-height: 1rem;
   color: var(--black);
 }

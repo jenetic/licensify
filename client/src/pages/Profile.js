@@ -36,6 +36,15 @@ const Profile = () => {
 
     const userTopGenres = await getTopGenres(time_range);
     setTopGenres(userTopGenres);
+
+    // Display time range
+    if (time_range === "short_term") {
+      document.getElementById("display-time-range").textContent = "FROM LAST MONTH";
+    } else if (time_range === "long_term") {
+      document.getElementById("display-time-range").textContent = "FROM ALL TIME";
+    } else {
+      document.getElementById("display-time-range").textContent = "FROM LAST 6 MONTHS";
+    }
   }
 
   useEffect(() => {
@@ -101,7 +110,7 @@ const Profile = () => {
             <p id="spotify">Spotify</p>
             <p id="country">{profile.country}</p>
             <p id="driver-license">DRIVER LICENSE</p>
-            <p id="federal-limits-apply">FEDERAL LIMITS APPLY</p>
+            <p id="display-time-range">FROM LAST 6 MONTHS</p>
 
 
             <hr id="topGreenLine"/>
