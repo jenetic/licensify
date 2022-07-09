@@ -84,7 +84,7 @@ const Profile = () => {
           <p>{profile.followers.total} Followers</p>
           <p>{profile.id}</p>
           <p>{profile.country}</p>
-          <p>{topArtist}</p>
+          <p>{topArtist.toUpperCase()}</p>
           <p>{topTrack.name}</p>
           <p>{topGenres[0]}</p>
           <p>{topGenres[1]}</p>
@@ -107,7 +107,7 @@ const Profile = () => {
             
            
 
-            <p id="spotify">Spotify</p>
+            <p id="licensify">Licensify</p>
             <p id="country">{profile.country}</p>
             <p id="driver-license">DRIVER LICENSE</p>
             <p id="display-time-range">FROM LAST 6 MONTHS</p>
@@ -128,11 +128,17 @@ const Profile = () => {
             <p id="fnKey" className="sectionKey topSection">FN</p>
             <p id="fnValue" className="sectionValue">{getFirstName(profile.display_name).toUpperCase()}</p>
 
-            <p id="trackKey" className="sectionKey topSection">#1 SONG</p>
-            <p id="trackValue" className="sectionValue">{topTrack.name}</p>
-
-            <p id="artistKey" className="sectionKey topSection">#1 ARTIST</p>
-            <p id="artistValue" className="sectionValue">{topArtist.toUpperCase()}</p>
+            <div id="trackAndArtistWrapper">
+              <div id="track">
+                <p id="trackKey" className="sectionKey topSection">#1 TRACK</p>
+                <p id="trackValue" className="sectionValue">{topTrack.name}</p>
+              </div>
+              <div id="artist">
+                <p id="artistKey" className="sectionKey topSection">#1 ARTIST</p>
+                <p id="artistValue" className="sectionValue">{topArtist.toUpperCase()}</p>
+              </div>
+            </div>
+           
 
             <p id="followersKey" className="sectionKey">FOLLOWERS</p>
             <p id="followersValue" className="sectionValue">{profile.followers.total}</p>
@@ -148,7 +154,6 @@ const Profile = () => {
             {profile.images.length && profile.images[0].url && (
               <img id="smallProfilePic" src={profile.images[0].url}></img>
             )}
-
           </div>
           
           

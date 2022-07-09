@@ -37,6 +37,7 @@ hr {
 .sectionValue {
   z-index: 3;
   font-size: 1.1rem;
+  line-height: 1rem;
   color: var(--black);
 }
 
@@ -82,19 +83,19 @@ hr {
   opacity: 0.95;
 }
 
-#spotify {
-  top: 10px;
+#licensify {
+  top: 17.5px;
   left: 20px;
   z-index: 3;
   
   color: var(--dark-blue);
   font-family: 'Roboto', sans-serif;
-  font-size: 2.85rem;
+  font-size: 2.46rem;
 }
 
 #country {
-  top: 37px;
-  left: 167px;
+  top: 39px;
+  left: 181px;
 
   font-size: 0.9rem;
   color: var(--blue);
@@ -176,22 +177,23 @@ hr {
   left: 200px;
 }
 
-#trackKey {
+#trackAndArtistWrapper {
   top: 194px;
+  left: 175px;
+
+  display: flex;
+  flex-direction: column; 
+  width: 315px;
 }
 
-#trackValue {
-  top: 191.5px;
-  left: 243px;
+#track, #artist {
+  display: flex;
+  max-height: 33.7px;
+  overflow: hidden;
 }
 
-#artistKey {
-  top: 218px;
-}
-
-#artistValue {
-  top: 215.5px;
-  left: 252px;
+#trackKey, #artistKey {
+  padding-right: 5px;
 }
 
 #followersKey {
