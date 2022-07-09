@@ -109,8 +109,8 @@ const Profile = () => {
 
             <p id="licensify">Licensify</p>
             <p id="country">{profile.country}</p>
-            <p id="driver-license">DRIVER LICENSE</p>
-            <p id="display-time-range">FROM LAST 6 MONTHS</p>
+            <p id="driverLicense">DRIVER LICENSE</p>
+            <p id="displayTimeRange">FROM LAST 6 MONTHS</p>
 
 
             <hr id="topGreenLine"/>

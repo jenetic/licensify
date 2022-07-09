@@ -83,7 +83,7 @@ hr {
   overflow: hidden;
 }
 
-#driver-license {
+#driverLicense {
   top: 18px;
   left: 230px;
 
@@ -91,7 +91,7 @@ hr {
   color: var(--blue);
 }
 
-#display-time-range {
+#displayTimeRange {
   top: 32px;
   left: 405px;
 
