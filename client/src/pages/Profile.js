@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 import { 
   getCurrentUserProfile,
   getTopArtists,
-  getTopTracks,
+  getTopTrackName,
   getTopGenres,
-  getTopTrackAlbumCover
+  getTopTrackAlbumCover,
+  getTopTrackArtists
 } from '../spotify';
 import { 
   catchErrors,
@@ -19,7 +20,8 @@ const Profile = () => {
 
   const [profile, setProfile] = useState(null);
   const [topArtist, setTopArtist] = useState("");
-  const [topTrack, setTopTrack] = useState("");
+  const [topTrackName, setTopTrackName] = useState("");
+  const [topTrackArtists, setTopTrackArtists] = useState("");
   const [topTrackAlbumCover, setTopTrackAlbumCover] = useState("");
   const [topGenres, setTopGenres] = useState("");
 
@@ -28,8 +30,11 @@ const Profile = () => {
     const userTopArtists = await getTopArtists(time_range);
     setTopArtist(userTopArtists.data.items[0].name);
 
-    const userTopTracks = await getTopTracks(time_range);
-    setTopTrack(userTopTracks.data.items[0]);
+    const userTopTrackName = await getTopTrackName(time_range);
+    setTopTrackName(userTopTrackName);
+
+    const userTopTrackArtists = await getTopTrackArtists(time_range);
+    setTopTrackArtists(userTopTrackArtists);
 
     const userTopTrackAlbumCover = await getTopTrackAlbumCover(time_range);
     setTopTrackAlbumCover(userTopTrackAlbumCover);
@@ -39,11 +44,11 @@ const Profile = () => {
 
     // Display time range
     if (time_range === "short_term") {
-      document.getElementById("display-time-range").textContent = "FROM LAST MONTH";
+      document.getElementById("displayTimeRange").textContent = "FROM LAST MONTH";
     } else if (time_range === "long_term") {
-      document.getElementById("display-time-range").textContent = "FROM ALL TIME";
+      document.getElementById("displayTimeRange").textContent = "FROM ALL TIME";
     } else {
-      document.getElementById("display-time-range").textContent = "FROM LAST 6 MONTHS";
+      document.getElementById("displayTimeRange").textContent = "FROM LAST 6 MONTHS";
     }
   }
 
@@ -56,8 +61,11 @@ const Profile = () => {
       const userTopArtists = await getTopArtists();
       setTopArtist(userTopArtists.data.items[0].name);
 
-      const userTopTracks = await getTopTracks();
-      setTopTrack(userTopTracks.data.items[0]);
+      const userTopTrackName = await getTopTrackName();
+      setTopTrackName(userTopTrackName);
+
+      const userTopTrackArtists = await getTopTrackArtists();
+      setTopTrackArtists(userTopTrackArtists);
 
       const userTopTrackAlbumCover = await getTopTrackAlbumCover();
       setTopTrackAlbumCover(userTopTrackAlbumCover);
@@ -77,19 +85,6 @@ const Profile = () => {
           <button onClick={() => changeTimeRange("medium_term")}>6 Months</button>
           <button onClick={() => changeTimeRange("long_term")}>All time</button>
           </div>
-
-          {/* SPOTIFY INFORMATION */}
-
-          {/* <h1>{profile.display_name}</h1>
-          <p>{profile.followers.total} Followers</p>
-          <p>{profile.id}</p>
-          <p>{profile.country}</p>
-          <p>{topArtist.toUpperCase()}</p>
-          <p>{topTrack.name}</p>
-          <p>{topGenres[0]}</p>
-          <p>{topGenres[1]}</p>
-          <p>{topGenres[2]}</p>
-          <img src={topTrackAlbumCover}></img> */}
 
           {/* CARD */}
           <div id="card">
@@ -145,7 +140,7 @@ const Profile = () => {
               <div id="trackAndArtistWrapper" className="flexWrapper">
                 <div id="track" className="flexWrapper">
                   <p id="trackKey" className="sectionKey">#1 TRACK</p>
-                  <p id="trackValue" className="sectionValue">{topTrack.name}</p>
+                  <p id="trackValue" className="sectionValue">{topTrackArtists} - {topTrackName}</p>
                 </div>
                 <div id="artist" className="flexWrapper"> 
                   <p id="artistKey" className="sectionKey">#1 ARTIST</p>

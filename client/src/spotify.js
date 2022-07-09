@@ -147,16 +147,26 @@ export const getTopArtists = (time_range = 'medium_term') => {
 * https://developer.spotify.com/documentation/web-api/reference/#/operations/get-users-top-artists-and-tracks
 * @returns {Promise}
 */
-export const getTopTracks = (time_range = 'medium_term') => {
+const getTopTracks = (time_range = 'medium_term') => {
   return axios.get(`/me/top/tracks?time_range=${time_range}`);
 };
+
+/**
+ * Get name of top track given time range
+ * @param {String} time_range 
+ * @returns {String} name of top track uppercased
+ */
+export const getTopTrackName = async (time_range = 'medium_term') => {
+  const topTracks = await getTopTracks(time_range);
+  return topTracks.data.items[0].name.toUpperCase();
+}
 
 /**
  * Get track info given track ID
  * @param {String} trackId 
  * @returns {Promise}
  */
-export const getTrack = (trackId) => {
+const getTrack = (trackId) => {
   return axios.get(`/tracks/${trackId}`);
 }
 
@@ -165,6 +175,23 @@ export const getTopTrackAlbumCover = async (time_range = 'medium_term') => {
   const trackId = topTracks.data.items[0].id;
   const track = await getTrack(trackId);
   return track.data.album.images[0].url;
+}
+
+/**
+ * Get artists of top track given time range
+ * @param {String} time_range 
+ * @returns {String} top artists separated by comma
+ */
+export const getTopTrackArtists = async (time_range = 'medium_term') => {
+  const topTracks = await getTopTracks(time_range);
+  const artistsList = topTracks.data.items[0].artists;
+
+  let artistsNames = [];
+  artistsList.forEach((artist) => {
+    artistsNames.push(artist.name);
+  })
+
+  return artistsNames.join(", ").toUpperCase();
 }
 
 /**
