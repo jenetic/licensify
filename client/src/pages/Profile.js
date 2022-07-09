@@ -10,9 +10,10 @@ import {
 import { 
   catchErrors,
   getCurrentDate, 
-  getLastName,
+  getLastName, 
   getFirstName,
 } from '../utils';
+import noProfilePic from '../img/noProfilePic.jpg';
 import '../Style.css';
 
 
@@ -93,8 +94,10 @@ const Profile = () => {
             
             <div id="mainProfilePicAndSignature">
               <div id="mainProfilePicCrop">
-                {profile.images.length && profile.images[0].url && (
+                {(profile.images.length && profile.images[0].url) ? (
                   <img src={profile.images[0].url}></img>
+                ) : (
+                  <img src={noProfilePic}></img>
                 )}
               </div>
               <p id="signature">{profile.display_name}</p>
@@ -162,8 +165,10 @@ const Profile = () => {
 
             
 
-            {profile.images.length && profile.images[0].url && (
+            {(profile.images.length && profile.images[0].url) ? (
               <img id="smallProfilePic" src={profile.images[0].url}></img>
+            ) : (
+              <img id="smallProfilePic" src={noProfilePic}></img>
             )}
           </div>
           

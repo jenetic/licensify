@@ -153,6 +153,7 @@ hr {
   top: 88px;
   left: 175px;
 
+  z-index: 3;
   flex-direction: column;
   width: 315px;
   
@@ -254,8 +255,7 @@ hr {
 
 #card {
   position: relative;
-  top: 10px;
-  left: 10px;
+  margin: 10px;
 }
 
 #card > * {
