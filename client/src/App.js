@@ -20,14 +20,17 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="mainFont">Licensify</h1>
-
-      {token &&
-        <button className="mainFont" onClick={logout}>Log Out</button>
-      }
       
-      <Router>
-        <Link to="/about">About</Link>
+      <div id="header">
+        <h1 id="title" className="mainFont">licensify</h1>
+        <Router>
+          <nav>
+            <Link className="link" to="/">home</Link>
+            <Link className="link" to="/about">about</Link>
+            {token &&
+              <button id="logout" className="link mainFont" onClick={logout}>log out</button>
+            }
+          </nav>
         <Routes>
           <Route path="/about" element={<About />} />
           {!token ? (
@@ -38,6 +41,12 @@ function App() {
         </Routes>
       </Router>
 
+    </div>
+      
+
+
+      
+      
 
       {/* {!token ? (
         <Login />

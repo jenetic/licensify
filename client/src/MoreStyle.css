@@ -5,6 +5,21 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+nav {
+  margin: auto auto 2rem;
+}
+
+.link {
+  margin: 0rem 0.6rem;
+  text-decoration: none;
+  color:rgb(2, 65, 180);
+  padding: 0rem;
+}
+
+.link:hover {
+  color: white;
+}
+
 .mainFont {
   font-family: 'Roboto', sans-serif;
 }
@@ -18,12 +33,27 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-#timeRangeButtons {
-  display: flex;
-}
-
-/* #profilePage {
+#header {
   display: flex;
   flex-direction: column;
-  align-items: center;
-} */
+  align-items: center; 
+}
+
+#title {
+  font-size: 5rem;
+  margin: 1rem auto 0rem;
+}
+
+#logout {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+#profilePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}

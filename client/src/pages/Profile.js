@@ -82,7 +82,7 @@ const Profile = () => {
     <>
       {profile && (
         <div id="profilePage">
-          <p className="mainFont">Select Time Range</p>
+          <p className="mainFont">select time range</p>
           <div id="timeRangeButtons">
             <button className="timeRangeButton mainFont" onClick={() => changeTimeRange("short_term")}>1 Month</button>
             <button className="timeRangeButton mainFont" onClick={() => changeTimeRange("medium_term")}>6 Months</button>
