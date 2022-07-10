@@ -103,13 +103,10 @@ const Profile = () => {
               <p id="signature">{profile.display_name}</p>
             </div>
             
-           
-
             <p id="licensify">Licensify</p>
             <p id="country">{profile.country}</p>
             <p id="driverLicense">DRIVER LICENSE</p>
             <p id="displayTimeRange">FROM LAST 6 MONTHS</p>
-
 
             <hr id="topGreenLine"/>
             <hr id="bottomGreenLine"/>
@@ -161,18 +158,14 @@ const Profile = () => {
               </p>
             </div>
 
-           
-
-            
-
             {(profile.images.length && profile.images[0].url) ? (
               <img id="smallProfilePic" src={profile.images[0].url}></img>
             ) : (
               <img id="smallProfilePic" src={noProfilePic}></img>
             )}
+
+            <p id="watermark">LICENSIFY.HEROKUAPP.COM</p>
           </div>
-          
-          
         </div>
       )}
     </>

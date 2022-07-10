@@ -150,7 +150,7 @@ hr {
 }
 
 #topSection {
-  top: 88px;
+  top: 90px;
   left: 175px;
 
   z-index: 3;
@@ -251,6 +251,16 @@ hr {
 
   height: 77px;
   opacity: 0.4;
+}
+
+#watermark {
+  top: 78px;
+  left: 175px;
+
+  /* font-weight: normal; */
+  font-size: 0.6rem;
+  color: var(--blue);
+  /* opacity: 0.5; */
 }
 
 #card {
