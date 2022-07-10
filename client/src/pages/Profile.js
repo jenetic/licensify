@@ -82,14 +82,16 @@ const Profile = () => {
     <>
       {profile && (
         <div id="profilePage">
-          <p className="mainFont">select time range</p>
-          <div id="timeRangeButtons">
-            <button className="timeRangeButton mainFont" onClick={() => changeTimeRange("short_term")}>1 Month</button>
-            <button className="timeRangeButton mainFont" onClick={() => changeTimeRange("medium_term")}>6 Months</button>
-            <button className="timeRangeButton mainFont" onClick={() => changeTimeRange("long_term")}>All Time</button>
+          <div id="timeRangeBox">
+            <h2 id="timeRange" className="mainFont">time range</h2>
+            <div id="timeRangeButtons">
+              <button id="oneMonthButton" className="timeRangeButton mainFont" onClick={() => changeTimeRange("short_term")}>1 month</button>
+              <button id="sixMonthsButton" className="timeRangeButton mainFont" onClick={() => changeTimeRange("medium_term")}>6 months</button>
+              <button id="allTimeButton" className="timeRangeButton mainFont" onClick={() => changeTimeRange("long_term")}>all time</button>
+            </div>
           </div>
 
-          <h2>Your Spotify Driver License</h2>
+          {/* <h2>your spotify driver license</h2> */}
 
           {/* CARD */}
           <div id="cardWrapper">

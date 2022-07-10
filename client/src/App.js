@@ -20,7 +20,6 @@ function App() {
 
   return (
     <div className="App">
-      
       <div id="header">
         <h1 id="title" className="mainFont">licensify</h1>
         <Router>
@@ -31,37 +30,16 @@ function App() {
               <button id="logout" className="link mainFont" onClick={logout}>log out</button>
             }
           </nav>
-        <Routes>
-          <Route path="/about" element={<About />} />
-          {!token ? (
-            <Route path="/" element={<Login />} />
-          ) : (
-            <Route path="/" element={<Profile />} />
-          )}
-        </Routes>
-      </Router>
-
-    </div>
-      
-
-
-      
-      
-
-      {/* {!token ? (
-        <Login />
-        
-      ) : (
-        <>
-          <button className="mainFont" onClick={logout}>Log Out</button>
-          <Router>
-            <Routes>
+          <Routes>
+            <Route path="/about" element={<About />} />
+            {!token ? (
+              <Route path="/" element={<Login />} />
+            ) : (
               <Route path="/" element={<Profile />} />
-              <Route path="/about" element={<About />} />
-            </Routes>
-          </Router>
-        </>
-      )} */}
+            )}
+          </Routes>
+        </Router>
+      </div>
     </div>
   );
 }

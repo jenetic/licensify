@@ -6,7 +6,12 @@ body {
 }
 
 nav {
-  margin: auto auto 2rem;
+  margin: auto auto 1rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  /* font-weight: normal; */
 }
 
 .link {
@@ -25,9 +30,9 @@ nav {
 }
 
 .timeRangeButton {
-  margin: 0rem 1rem 0rem 0rem;
+  /* margin: 0rem 0.5rem 0rem; */
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
   color: rgb(2, 65, 180);
   border: none;
   background-color: rgba(255, 255, 255, 0.3);
@@ -56,4 +61,33 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center; 
+}
+
+#timeRangeBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem auto 2rem;
+  padding: 0rem;
+
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+}
+
+#timeRange {
+  margin: 0.5rem;
+  font-weight: normal;
+}
+
+#oneMonthButton {
+  border-bottom-left-radius: 0.5rem;
+}
+
+#sixMonthsButton {
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+}
+
+#allTimeButton {
+  border-bottom-right-radius: 0.5rem;
 }
