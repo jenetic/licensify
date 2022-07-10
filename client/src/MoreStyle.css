@@ -11,7 +11,6 @@ nav {
 
 h2 {
   font-size: 1.2rem;
-  /* font-weight: normal; */
 }
 
 .link {
@@ -30,12 +29,22 @@ h2 {
 }
 
 .timeRangeButton {
-  /* margin: 0rem 0.5rem 0rem; */
   padding: 0.5rem 1rem;
-  /* border-radius: 0.5rem; */
   color: rgb(2, 65, 180);
   border: none;
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.timeRangeButton:hover {
+  background-color: rgba(188, 98, 98, 0.3);
+}
+
+.timeRangeButton:active {
+  background-color: rgba(238, 222, 122, 0.3);
+}
+
+.timeRangeButton:focus {
+  background-color: rgba(238, 222, 122, 0.3);
 }
 
 #header {
@@ -57,6 +66,48 @@ h2 {
   font-size: 1rem;
 }
 
+#loginPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: solid 1px rgb(255, 255, 255); */
+}
+
+#tagline {
+  margin: 1rem 3rem 1.5rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#loginButton {
+  display: flex;
+  padding: 0.4rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  background-color: aquamarine;
+  background: linear-gradient(60deg, rgb(165, 255, 232) 0%, rgb(162, 255, 199) 35%, rgb(198, 255, 158) 100%);
+}
+
+#loginButton img {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: auto 0.3rem auto auto;
+}
+
+#loginButton p {
+  color:rgb(2, 65, 180);
+  padding: 0.2rem;
+}
+
+#loginButton:hover {
+  background-color:rgb(25, 99, 236);
+}
+
+#loginButton:active {
+  background-color:rgb(191, 209, 243);
+}
+
 #profilePage {
   display: flex;
   flex-direction: column;
@@ -67,7 +118,6 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem auto 2rem;
   padding: 0rem;
 
   background-color: rgba(255, 255, 255, 0.3);
@@ -90,4 +140,11 @@ h2 {
 
 #allTimeButton {
   border-bottom-right-radius: 0.5rem;
+}
+
+#style {
+  margin: 1rem;
+  font-size: 0.8rem;
+  color: white;
+  opacity: 0.4;
 }

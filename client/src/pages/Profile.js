@@ -82,18 +82,7 @@ const Profile = () => {
     <>
       {profile && (
         <div id="profilePage">
-          <div id="timeRangeBox">
-            <h2 id="timeRange" className="mainFont">time range</h2>
-            <div id="timeRangeButtons">
-              <button id="oneMonthButton" className="timeRangeButton mainFont" onClick={() => changeTimeRange("short_term")}>1 month</button>
-              <button id="sixMonthsButton" className="timeRangeButton mainFont" onClick={() => changeTimeRange("medium_term")}>6 months</button>
-              <button id="allTimeButton" className="timeRangeButton mainFont" onClick={() => changeTimeRange("long_term")}>all time</button>
-            </div>
-          </div>
 
-          {/* <h2>your spotify driver license</h2> */}
-
-          {/* CARD */}
           <div id="cardWrapper">
             <div id="card">
               <div id="cardRectangle"></div>
@@ -139,8 +128,8 @@ const Profile = () => {
                   </div>
 
                   <div id="fn" className="flexWrapper">
-                      <p id="fnKey" className="sectionKey">FN</p>
-                      <p id="fnValue" className="sectionValue">{getFirstName(profile.display_name).toUpperCase()}</p>
+                    <p id="fnKey" className="sectionKey">FN</p>
+                    <p id="fnValue" className="sectionValue">{getFirstName(profile.display_name).toUpperCase()}</p>
                   </div>
                 </div>
 
@@ -174,6 +163,18 @@ const Profile = () => {
               <p id="websiteName">LICENSIFY.HEROKUAPP.COM</p>
             </div>
           </div>
+
+          <p id="style">style: California driver license </p>
+          
+          <div id="timeRangeBox">
+            <p id="timeRange" className="mainFont">time range</p>
+            <div id="timeRangeButtons">
+              <button id="oneMonthButton" className="timeRangeButton mainFont" onClick={() => changeTimeRange("short_term")}>1 month</button>
+              <button id="sixMonthsButton" className="timeRangeButton mainFont" onClick={() => changeTimeRange("medium_term")}>6 months</button>
+              <button id="allTimeButton" className="timeRangeButton mainFont" onClick={() => changeTimeRange("long_term")}>all time</button>
+            </div>
+          </div>
+
         </div>
       )}
     </>

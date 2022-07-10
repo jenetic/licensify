@@ -24,7 +24,7 @@ function App() {
         <h1 id="title" className="mainFont">licensify</h1>
         <Router>
           <nav>
-            <Link className="link" to="/">home</Link>
+            <Link className="link" to="/">my card</Link>
             <Link className="link" to="/about">about</Link>
             {token &&
               <button id="logout" className="link mainFont" onClick={logout}>log out</button>
