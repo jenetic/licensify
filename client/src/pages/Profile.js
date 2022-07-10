@@ -164,7 +164,7 @@ const Profile = () => {
               <img id="smallProfilePic" src={noProfilePic}></img>
             )}
 
-            <p id="watermark">LICENSIFY.HEROKUAPP.COM</p>
+            <p id="websiteName">LICENSIFY.HEROKUAPP.COM</p>
           </div>
         </div>
       )}
