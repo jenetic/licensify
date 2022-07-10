@@ -1,0 +1,29 @@
+body {
+  background: rgb(255,165,226);
+  background: linear-gradient(60deg, rgba(255,165,226,1) 0%, rgba(207,174,255,1) 35%, rgba(128,243,255,1) 100%);
+  background-attachment: fixed;
+  font-family: 'Roboto', sans-serif;
+}
+
+.mainFont {
+  font-family: 'Roboto', sans-serif;
+}
+
+.timeRangeButton {
+  margin: 0rem 1rem 0rem 0rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: rgb(2, 65, 180);
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#timeRangeButtons {
+  display: flex;
+}
+
+/* #profilePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */

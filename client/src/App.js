@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { accessToken, logout } from './spotify';
-import { Login, Profile } from './pages';
+import { Login, Profile, About } from './pages';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from 'react-router-dom';
 import './Style.css'; 
+import './MoreStyle.css'; 
 
 function App() {
 
@@ -18,16 +19,17 @@ function App() {
 
   return (
     <div className="App">
+      <h1 className="mainFont">Licensify</h1>
       {!token ? (
         <Login />
+        
       ) : (
         <>
-          <button onClick={logout}>Log Out</button>
-
-          {/* Router */}
+          <button className="mainFont" onClick={logout}>Log Out</button>
           <Router>
             <Routes>
               <Route path="/" element={<Profile />} />
+              {/* <Route path="/about" element={<About />} /> */}
             </Routes>
           </Router>
         </>

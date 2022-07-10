@@ -7,11 +7,6 @@
   --red: #C74528;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
-}
-
 p {
   margin: 0px;
   padding: 0px;
@@ -263,9 +258,26 @@ hr {
 
 #card {
   position: relative;
-  margin: 10px;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  width: 506px;
+  height: 320px;
 }
 
 #card > * {
   position: absolute;
+}
+
+#cardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* LOGIN PAGE */
+
+#loginPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
