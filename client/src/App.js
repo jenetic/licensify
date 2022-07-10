@@ -5,8 +5,9 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Link
 } from 'react-router-dom';
-import './Style.css'; 
+import './Card.css'; 
 import './MoreStyle.css'; 
 
 function App() {
@@ -20,7 +21,25 @@ function App() {
   return (
     <div className="App">
       <h1 className="mainFont">Licensify</h1>
-      {!token ? (
+
+      {token &&
+        <button className="mainFont" onClick={logout}>Log Out</button>
+      }
+      
+      <Router>
+        <Link to="/about">About</Link>
+        <Routes>
+          <Route path="/about" element={<About />} />
+          {!token ? (
+            <Route path="/" element={<Login />} />
+          ) : (
+            <Route path="/" element={<Profile />} />
+          )}
+        </Routes>
+      </Router>
+
+
+      {/* {!token ? (
         <Login />
         
       ) : (
@@ -29,11 +48,11 @@ function App() {
           <Router>
             <Routes>
               <Route path="/" element={<Profile />} />
-              {/* <Route path="/about" element={<About />} /> */}
+              <Route path="/about" element={<About />} />
             </Routes>
           </Router>
         </>
-      )}
+      )} */}
     </div>
   );
 }

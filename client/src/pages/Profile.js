@@ -6,7 +6,6 @@ import {
   getTopGenres,
   getTopTrackAlbumCover,
   getTopTrackArtists,
-  logout
 } from '../spotify';
 import { 
   catchErrors,
@@ -15,7 +14,7 @@ import {
   getFirstName,
 } from '../utils';
 import noProfilePic from '../img/noProfilePic.jpg';
-import '../Style.css';
+import '../Card.css';
 import '../MoreStyle.css';
 
 
