@@ -40,6 +40,12 @@ function App() {
           </Routes>
         </Router>
       </div>
+      <div id="footerWrapper">
+        <p id="footer">
+          <span>created by </span>
+          <a href="http://srnq.github.io" target="_blank">Jenny Lam</a>
+        </p>
+      </div>
     </div>
   );
 }

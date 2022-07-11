@@ -82,7 +82,6 @@ const Profile = () => {
     <>
       {profile && (
         <div id="profilePage">
-
           <div id="cardWrapper">
             <div id="card">
               <div id="cardRectangle"></div>
@@ -170,8 +169,7 @@ const Profile = () => {
               <button id="allTimeButton" className="timeRangeButton mainFont" onClick={() => changeTimeRange("long_term")}>all time</button>
             </div>
 
-            <p id="style">style: California driver license </p>
-
+            <p id="style">Style: California Driver License </p>
         </div>
       )}
     </>
