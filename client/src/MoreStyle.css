@@ -1,12 +1,16 @@
+:root {
+  --main-text: #000b56;
+  --heading: #00218e;
+  --clickable: #7064ee;
+  --active: #ef38b8;
+}
+
 body {
   background: rgb(255,165,226);
   background: linear-gradient(60deg, rgba(255,165,226,1) 0%, rgba(207,174,255,1) 35%, rgba(128,243,255,1) 100%);
   background-attachment: fixed;
   font-family: 'Roboto', sans-serif;
-}
-
-nav {
-  margin: auto auto 1rem;
+  color: var(--main-text);
 }
 
 h2 {
@@ -16,12 +20,12 @@ h2 {
 .link {
   margin: 0rem 0.6rem;
   text-decoration: none;
-  color:rgb(2, 65, 180);
+  color: var(--clickable);
   padding: 0rem;
 }
 
 .link:hover {
-  color: white;
+  color: var(--active);
 }
 
 .mainFont {
@@ -30,21 +34,26 @@ h2 {
 
 .timeRangeButton {
   padding: 0.5rem 1rem;
-  color: rgb(2, 65, 180);
+  color: var(--clickable);
   border: none;
-  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.0);
 }
 
 .timeRangeButton:hover {
-  background-color: rgba(188, 98, 98, 0.3);
+  background: linear-gradient(60deg, rgba(150, 216, 230, 1), rgba(174, 238, 204, 1));
+  color: var(--active);
 }
 
 .timeRangeButton:active {
-  background-color: rgba(238, 222, 122, 0.3);
+  background: linear-gradient(60deg, rgba(150, 216, 230, 1), rgba(174, 238, 204, 1));
+  color: var(--active);
+  filter: saturate(0.6);
 }
 
 .timeRangeButton:focus {
-  background-color: rgba(238, 222, 122, 0.3);
+  background: linear-gradient(60deg, rgba(150, 216, 230, 1), rgba(174, 238, 204, 1));
+  color: var(--active);
 }
 
 #header {
@@ -55,7 +64,8 @@ h2 {
 
 #title {
   font-size: 5rem;
-  margin: 1rem auto 0rem;
+  margin: 2.5rem auto 0rem;
+  color: var(--heading);
 }
 
 #logout {
@@ -70,7 +80,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: solid 1px rgb(255, 255, 255); */
+  margin: 8vh auto;
 }
 
 #tagline {
@@ -82,10 +92,11 @@ h2 {
 
 #loginButton {
   display: flex;
+  margin: auto auto 3rem;
   padding: 0.4rem 1.5rem;
   border-radius: 0.5rem;
   text-decoration: none;
-  background-color: aquamarine;
+  background-color: rgb(165, 255, 232);
   background: linear-gradient(60deg, rgb(165, 255, 232) 0%, rgb(162, 255, 199) 35%, rgb(198, 255, 158) 100%);
 }
 
@@ -96,12 +107,12 @@ h2 {
 }
 
 #loginButton p {
-  color:rgb(2, 65, 180);
+  color: var(--clickable);
   padding: 0.2rem;
 }
 
 #loginButton:hover {
-  background-color:rgb(25, 99, 236);
+  background: linear-gradient(60deg, rgb(55, 255, 245) 0%, rgb(93, 255, 158) 35%, rgb(150, 255, 44) 100%);
 }
 
 #loginButton:active {
@@ -119,32 +130,43 @@ h2 {
   flex-direction: column;
   align-items: center;
   padding: 0rem;
+  border-radius: 0.5rem;
 
   background-color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(60deg, rgba(180, 234, 255, 0.6), rgba(211, 255, 179, 0.6));
+}
+
+#timeRangeButtons {
+  font-weight: normal;
+  background-color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(60deg, rgba(180, 234, 255, 0.6), rgba(211, 255, 179, 0.6));
   border-radius: 0.5rem;
 }
 
-#timeRange {
-  margin: 0.5rem;
-  font-weight: normal;
-}
-
 #oneMonthButton {
-  border-bottom-left-radius: 0.5rem;
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
 }
 
 #sixMonthsButton {
-  border-left: 1px solid red;
-  border-right: 1px solid red;
+  border-radius: 0rem;
 }
 
 #allTimeButton {
-  border-bottom-right-radius: 0.5rem;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
 }
-
 #style {
   margin: 1rem;
   font-size: 0.8rem;
-  color: white;
-  opacity: 0.4;
+  color: var(--main-text);
+  opacity: 0.5;
+}
+
+#aboutPage {
+  margin: 2.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }

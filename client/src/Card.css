@@ -263,6 +263,7 @@ hr {
   font-weight: bold;
   width: 506px;
   height: 320px;
+  margin: 2rem auto;
 }
 
 #card > * {
