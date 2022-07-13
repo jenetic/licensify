@@ -166,6 +166,7 @@ a:hover {
   border-top-left-radius: 0rem;
   border-bottom-left-radius: 0rem;
 }
+
 #style {
   margin: 1rem 0rem;;
   color: var(--main-text);
@@ -234,5 +235,8 @@ a:hover {
   #timeRangeButtons, #style {
     transform: scale(1.4);
     margin: 1rem auto;
+  }
+  #tagline {
+    font-size: 2rem;
   }
 }
