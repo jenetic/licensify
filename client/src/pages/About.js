@@ -7,8 +7,8 @@ const About = () => {
         <p>
           Licensify takes your Spotify listening activity (top artists, tracks, and genres) and turns it into a 
           driver license in the style of a California driver license (for now?). Maybe there could be more card styles
-          in the future, but I haven't thought that far yet. If there is a particular style you'd like, feel free to 
-          contact me or open an issue on the Github repo.  
+          in the future, but I haven't thought that far yet. If there is a particular style you'd like, feel free to open
+          an issue on the Github repo to suggest it.  
         </p>
         <p>
           Licensify was made with React.js, Node.js, and Express.js. I used CSS to create the driver license and the
@@ -26,7 +26,7 @@ const About = () => {
           data may not load properly onto the card, but it should work again when you refresh the page (in theory).
         </p>
         <p>
-          If you find other issues or bugs, or have any suggestions, you can open an issue in the Github repo or contact me any other way.
+          If you find other issues or have any suggestions, you can open an issue in the Github repo or contact me any other way.
         </p>
       </div>
 
