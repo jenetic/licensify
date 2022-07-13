@@ -7,7 +7,7 @@
 
 body {
   background: rgb(255,165,226);
-  background: linear-gradient(60deg, rgba(255,165,226,1) 0%, rgba(207,174,255,1) 35%, rgba(128,243,255,1) 100%);
+  background: linear-gradient(60deg, rgb(255,165,226,1) 0%, rgb(201, 165, 255) 35%, rgb(128,243,255) 100%);
   background-attachment: fixed;
   font-family: 'Roboto', sans-serif;
   color: var(--main-text);
@@ -193,14 +193,32 @@ a:hover {
 }
 
 #aboutPage {
-  margin: 2.5rem 5rem;
+  margin: 3rem 5rem;
 }
 
 #aboutPage p {
   margin: 1rem auto;
 }
 
-#aboutPage p a {
+#contactLinks a {
   margin: auto 0.5rem;
   text-decoration: none;
+}
+
+@media (min-width: 1400px) {
+  #aboutPage {
+    margin: auto 20%;
+  }
+}
+
+@media (max-width: 1400px) {
+  #aboutPage {
+    margin: auto 20%;
+  }
+}
+
+@media (max-width: 1000px ) {
+  #aboutPage {
+    margin: 1.5rem 10% auto;
+  }
 }

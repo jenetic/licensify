@@ -3,7 +3,7 @@ import spotifyIcon from '../img/spotifyIcon.png';
 const Login = () => {
   return (
     <div id="loginPage">
-      <p id="tagline">get your listening activity as a driver license!</p>
+      <p id="tagline">turn your listening activity into a driver license!</p>
       <a id="loginButton" href="http://localhost:8888/login">
         <img src={spotifyIcon}></img>
         <p>Connect with Spotify</p>

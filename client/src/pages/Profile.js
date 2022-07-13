@@ -14,8 +14,6 @@ import {
   getFirstName,
 } from '../utils';
 import noProfilePic from '../img/noProfilePic.jpg';
-import '../Card.css';
-import '../MoreStyle.css';
 
 
 const Profile = () => {

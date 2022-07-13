@@ -12,17 +12,17 @@ const About = () => {
         to retreive user information. 
       </p>
       <p>
-        View the Github repo here.
+        View the Github repo <a href="https://github.com/srnq/licensify" target="_blank">here</a>.
       </p>
 
       <h2>who made this?</h2>
       <p>
         This app was made by Jenny Lam.
       </p>
-      <p>
-        <a href="https://github.com/srnq" target="_blank">Github</a> | 
-        <a href="https://srnq.github.io" target="_blank">Website</a> |
-        <a href="https://www.linkedin.com/in/jwny/" target="_blank">LinkedIn</a>
+      <p id="contactLinks">
+        <a href="https://jenetic.github.io" target="_blank">website</a> |
+        <a href="https://github.com/jenetic" target="_blank">github</a> | 
+        <a href="https://www.linkedin.com/in/jwny/" target="_blank">linkedin</a>
       </p>
     </div>
   )

@@ -7,8 +7,8 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import './Card.css'; 
-import './MoreStyle.css'; 
+import './css/Card.css'; 
+import './css/Main.css'; 
 
 function App() {
 
@@ -43,7 +43,7 @@ function App() {
       <div id="footerWrapper">
         <p id="footer">
           <span>created by </span>
-          <a href="http://srnq.github.io" target="_blank">Jenny Lam</a>
+          <a href="http://jenetic.github.io" target="_blank">Jenny Lam</a>
         </p>
       </div>
     </div>

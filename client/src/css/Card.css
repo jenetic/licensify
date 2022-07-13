@@ -269,3 +269,13 @@ hr {
 #card > * {
   position: absolute;
 }
+
+@media (max-width: 500px ) {
+  #card {
+    /* position: absolute; */
+    /* margin: 0rem; */
+    /* width: auto;
+    height: auto; */
+    /* margin: 0rem; */
+  }
+}
