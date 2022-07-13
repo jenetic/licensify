@@ -167,7 +167,7 @@ a:hover {
   border-bottom-left-radius: 0rem;
 }
 #style {
-  margin: 1rem;
+  margin: 1rem 0rem;;
   color: var(--main-text);
 }
 
@@ -220,5 +220,19 @@ a:hover {
 @media (max-width: 1000px ) {
   #aboutPage {
     margin: 1.5rem 10% auto;
+  }
+}
+
+@media (max-width: 500px ) {
+  #profilePage {
+    transform: scale(0.70); 
+  }
+  #card  {
+    margin: -1rem auto 3rem;
+    padding: 0rem;
+  }
+  #timeRangeButtons, #style {
+    transform: scale(1.4);
+    margin: 1rem auto;
   }
 }

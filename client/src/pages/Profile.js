@@ -25,6 +25,8 @@ const Profile = () => {
   const [topTrackAlbumCover, setTopTrackAlbumCover] = useState("");
   const [topGenres, setTopGenres] = useState("");
 
+
+
   // Changes Spotify data to fit specified time range
   const changeTimeRange = async (time_range) => {
     const userTopArtists = await getTopArtists(time_range);
