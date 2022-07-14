@@ -82,7 +82,7 @@ app.get('/callback', (req, res) => {
         }).toString();
 
         // Redirect to React app & pass along tokens in query params
-        res.redirect(`${FRONTEND_URI}${queryParams}`)
+        res.redirect(`${FRONTEND_URI}/${queryParams}`)
        
       } else {
         res.redirect(`/?${new URLSearchParams({ error: 'invalid_token'}).toString()}`);
