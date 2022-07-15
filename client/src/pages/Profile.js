@@ -147,8 +147,8 @@ const Profile = () => {
               <div id="genres" className="flexWrapper">
                 <p id="genresKey" className="sectionKey">TOP GENRES</p>
                 <p id="genresValue" className="sectionValue">
-                  <span>{topGenres[0]}</span>
-                  <span>{topGenres[1]}</span>
+                  <span>{topGenres[0]},      </span>    
+                  <span>{topGenres[1]},      </span>
                   <span>{topGenres[2]}</span>
                 </p>
               </div>

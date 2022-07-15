@@ -55,7 +55,7 @@ hr {
   z-index: 1;
 
   border-radius: 20px;
-  opacity: 0.12;
+  opacity: 0.18;
 }
 
 #licensify {
@@ -166,7 +166,7 @@ hr {
 
 #dlValue {
   font-family: 'Roboto Condensed', sans-serif;
-  margin-top: 4px;
+  margin-top: 5px;
   font-size: 1.4rem;
   width: 300px;
   line-height: 1.1rem; 
@@ -179,8 +179,8 @@ hr {
 }
 
 #expValue {
-  margin: -4px 20px 0px 0px;
-  font-size: 1.2rem;
+  margin: -6px 20px 0px 0px;
+  font-size: 1.35rem;
   color: var(--red);
 }
 
@@ -229,16 +229,15 @@ hr {
 
 #genresValue {
   font-size: 0.9rem;
-  width: 225px;
+  width: 210px;
   height: 30px;
   
   overflow: hidden;
 }
 
 #genresValue span {
-  margin: 0px 40px 0px 0px;
   word-break: keep-all;
-  white-space: pre;
+  white-space: pre-wrap;
 }
 
 #smallProfilePic {
