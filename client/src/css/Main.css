@@ -227,6 +227,9 @@ a:hover {
 }
 
 @media (max-width: 500px ) {
+  #title {
+    font-size: 4.2rem;
+  }
   #profilePage {
     transform: scale(0.70); 
   }

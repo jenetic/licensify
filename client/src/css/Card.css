@@ -60,6 +60,10 @@ hr {
   border-radius: 20px;
 }
 
+#loadingRectangle p {
+  font-size: 1.1rem;
+}
+
 #backgroundCoverArt {
   background-position: center;
   width: 506px;
@@ -281,4 +285,10 @@ hr {
 
 #card > * {
   position: absolute;
+}
+
+@media (max-width: 500px ) {
+  #loadingRectangle p {
+    font-size: 2rem;
+  }
 }
