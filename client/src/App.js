@@ -8,7 +8,11 @@ import {
   Link
 } from 'react-router-dom';
 import './css/Card.css'; 
-import './css/Main.css'; 
+import './css/Main.css';
+import ReactGA from 'react-ga';
+
+const TRACKING_ID = "G-ZD9Z6C3XWD";
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
 

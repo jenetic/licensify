@@ -9,7 +9,7 @@ const LOGIN_URI =
 const Login = () => {
   return (
     <div id="loginPage">
-      <p id="tagline">turn your listening activity into a driver license!</p>
+      <p id="tagline">turn your music listening activity into a driver license!</p>
       <a id="loginButton" href={LOGIN_URI}>
         <img src={spotifyIcon} alt="Spotify logo"></img>
         <p>Connect with Spotify</p>
