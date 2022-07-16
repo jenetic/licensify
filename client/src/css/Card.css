@@ -54,14 +54,20 @@ hr {
   z-index: 4;
 
   display: none;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #FFFDEA;
   border-radius: 20px;
 }
 
-#loadingRectangle p {
+#loadingMessage {
+  padding-bottom: 0.5rem;
   font-size: 1.5rem;
+}
+
+#refreshPageMessage {
+  font-size: 0.9rem;
 }
 
 #backgroundCoverArt {

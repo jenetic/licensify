@@ -17,7 +17,8 @@ const Card = ({
     <div id="card">
       <div id="cardRectangle"></div>
       <div id="loadingRectangle">
-        <p>loading...</p>
+        <p id="loadingMessage">loading...</p>
+        <p id="refreshPageMessage">(refresh page if this takes too long)</p>
       </div>
       <div id="backgroundCoverArt" style={{backgroundImage: `url(${topTrackAlbumCover})`}}></div>
       

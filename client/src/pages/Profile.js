@@ -50,8 +50,7 @@ const Profile = () => {
   // Changes Spotify data to fit specified time range
   const changeTimeRange = async (time_range) => {
 
-    // TODO: Implement better way of refreshing token after token expires
-    const accessToken = await getAccessToken();
+    // TODO: Implement way of refreshing token after token expires
 
     displayCardContents(time_range, false);
 
