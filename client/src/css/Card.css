@@ -130,23 +130,20 @@ hr {
 }
 #mainProfilePicAndSignature {
   top: 67px;
-  left: 18px;
+  left: 9px;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-#mainProfilePicCrop {
+#mainProfilePic {
   height: 190px;
   width: 150px;
   overflow: hidden;
   z-index: 2;
-}
-
-#mainProfilePicCrop img {
-  height: 190px;
-  margin: 0px 0px 0px -20px;
-  opacity: 0.95;
+  background-size: cover;
+  background-position: center;
 }
 
 #signature {

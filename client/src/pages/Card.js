@@ -22,13 +22,13 @@ const Card = ({
       <div id="backgroundCoverArt" style={{backgroundImage: `url(${topTrackAlbumCover})`}}></div>
       
       <div id="mainProfilePicAndSignature">
-        <div id="mainProfilePicCrop">
-          {(profile.images.length && profile.images[0].url) ? (
-            <img src={profile.images[0].url} alt="large profile pic"></img>
-          ) : (
-            <img src={noProfilePic} alt="large default profile pic"></img>
-          )}
-        </div>
+
+        {(profile.images.length && profile.images[0].url) ? (
+          <div id="mainProfilePic" style={{backgroundImage:`url('${profile.images[0].url}')`}}></div>
+        ) : (
+          <div id="mainProfilePic" style={{backgroundImage:`url('${noProfilePic}')`}}></div>
+        )}
+
         <p id="signature">{profile.display_name}</p>
       </div>
       
