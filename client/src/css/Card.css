@@ -61,7 +61,7 @@ hr {
 }
 
 #loadingRectangle p {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 
 #backgroundCoverArt {
@@ -289,6 +289,6 @@ hr {
 
 @media (max-width: 500px ) {
   #loadingRectangle p {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
