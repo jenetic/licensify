@@ -291,7 +291,11 @@ hr {
 }
 
 @media (max-width: 500px ) {
-  #loadingRectangle p {
+  #loadingMessage {
     font-size: 1.8rem;
+  }
+
+  #refreshPageMessage {
+    font-size: 1.4rem;
   }
 }
