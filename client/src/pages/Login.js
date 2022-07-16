@@ -11,7 +11,7 @@ const Login = () => {
     <div id="loginPage">
       <p id="tagline">turn your listening activity into a driver license!</p>
       <a id="loginButton" href={LOGIN_URI}>
-        <img src={spotifyIcon}></img>
+        <img src={spotifyIcon} alt="Spotify logo"></img>
         <p>Connect with Spotify</p>
       </a>
     </div>

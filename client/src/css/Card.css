@@ -48,6 +48,18 @@ hr {
   box-shadow: 2px 2px 2px 1px rgba(0, 4, 115, 0.25);
 }
 
+#loadingRectangle {
+  width: 506px;
+  height: 320px;
+  z-index: 4;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFDEA;
+  border-radius: 20px;
+}
+
 #backgroundCoverArt {
   background-position: center;
   width: 506px;
@@ -55,7 +67,7 @@ hr {
   z-index: 1;
 
   border-radius: 20px;
-  opacity: 0.18;
+  opacity: 0.15;
 }
 
 #licensify {

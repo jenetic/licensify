@@ -14,7 +14,7 @@ const About = () => {
           Spotify Web API to retrieve user listening activity from Spotify, as well as authorize Spotify accounts.
         </p>
         <p>
-          View the Github repo <a href="https://github.com/srnq/licensify" target="_blank">here</a>.
+          View the Github repo <a href="https://github.com/srnq/licensify" target="_blank" rel="noreferrer">here</a>.
         </p>
       </div>
 
@@ -35,9 +35,9 @@ const About = () => {
           This app was created by Jenny Lam.
         </p>
         <p id="contactLinks">
-          <a href="https://jenetic.github.io" target="_blank">website</a> |
-          <a href="https://github.com/jenetic" target="_blank">github</a> | 
-          <a href="https://www.linkedin.com/in/jwny/" target="_blank">linkedin</a>
+          <a href="https://jenetic.github.io" target="_blank" rel="noreferrer">website</a> |
+          <a href="https://github.com/jenetic" target="_blank" rel="noreferrer">github</a> | 
+          <a href="https://www.linkedin.com/in/jwny/" target="_blank" rel="noreferrer">linkedin</a>
         </p>
       </div>
 

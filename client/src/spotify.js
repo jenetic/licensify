@@ -62,7 +62,7 @@ const refreshToken = async () => {
       // Use `/refresh_token` endpoint from Node app
       const { data } = await axios.get(`/refresh_token?refresh_token=${LOCALSTORAGE_VALUES.refreshToken}`);
 
-      // Update localStoragetge values
+      // Update localStorage values
       window.localStorage.setItem(LOCALSTORAGE_KEYS.accessToken, data.access_token);
       window.localStorage.setItem(LOCALSTORAGE_KEYS.timestamp, Date.now());
 
@@ -78,7 +78,7 @@ const refreshToken = async () => {
  * Retrieves Spotify access token from localStorage or URL query params
  * @returns {string} A Spotify access token
  */
-const getAccessToken = () => {
+export const getAccessToken = () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const queryParams = {

@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { 
+  // accessToken,
+  getAccessToken,
   getCurrentUserProfile,
   getTopArtists,
   getTopTrackName,
@@ -25,10 +27,13 @@ const Profile = () => {
   const [topTrackAlbumCover, setTopTrackAlbumCover] = useState("");
   const [topGenres, setTopGenres] = useState("");
 
-
-
   // Changes Spotify data to fit specified time range
   const changeTimeRange = async (time_range) => {
+
+    const accessToken = await getAccessToken();
+
+    document.getElementById("loadingRectangle").style.display = "flex";
+
     const userTopArtists = await getTopArtists(time_range);
     setTopArtist(userTopArtists.data.items[0].name);
 
@@ -52,11 +57,14 @@ const Profile = () => {
     } else {
       document.getElementById("displayTimeRange").textContent = "FROM LAST 6 MONTHS";
     }
+
+    document.getElementById("loadingRectangle").style.display = "none";
   }
 
   useEffect(() => {
     // Get user profile data
     const fetchUserProfileData = async () => {
+
       const userProfile = await getCurrentUserProfile();
       setProfile(userProfile.data);
       
@@ -82,17 +90,21 @@ const Profile = () => {
     <>
       {profile && (
         <div id="profilePage">
+          <p id="loading"></p>
           <div id="cardWrapper">
             <div id="card">
               <div id="cardRectangle"></div>
+              <div id="loadingRectangle">
+                <p>loading...</p>
+              </div>
               <div id="backgroundCoverArt" style={{backgroundImage: `url(${topTrackAlbumCover})`}}></div>
               
               <div id="mainProfilePicAndSignature">
                 <div id="mainProfilePicCrop">
                   {(profile.images.length && profile.images[0].url) ? (
-                    <img src={profile.images[0].url}></img>
+                    <img src={profile.images[0].url} alt="large profile pic"></img>
                   ) : (
-                    <img src={noProfilePic}></img>
+                    <img src={noProfilePic} alt="large default profile pic"></img>
                   )}
                 </div>
                 <p id="signature">{profile.display_name}</p>
@@ -154,9 +166,9 @@ const Profile = () => {
               </div>
 
               {(profile.images.length && profile.images[0].url) ? (
-                <img id="smallProfilePic" src={profile.images[0].url}></img>
+                <img id="smallProfilePic" src={profile.images[0].url} alt="small profile pic"></img>
               ) : (
-                <img id="smallProfilePic" src={noProfilePic}></img>
+                <img id="smallProfilePic" src={noProfilePic} alt="small default profile pic"></img>
               )}
 
               <p id="websiteName">LICENSIFY.HEROKUAPP.COM</p>
