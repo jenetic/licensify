@@ -3,7 +3,7 @@ const About = () => {
     <div id="aboutPage">
       <div className="qna">
 
-        <h2>what is licensify</h2>
+        <h2>about licensify</h2>
         <p>
           Licensify takes your Spotify listening activity (top artists, tracks, and genres) and turns it into a 
           driver license in the style of a California driver license (for now?). Maybe there could be more card styles
@@ -19,20 +19,10 @@ const About = () => {
       </div>
 
       <div className="qna">
-        <h2>it's not working</h2>
-        <p>
-          If you leave the website open and lingering around for a long time (over an hour), your Spotify
-          data may not load properly onto the card, but it should work again when you refresh the page (in theory).
-        </p>
-        <p>
-          If you find other issues or have any suggestions, you can open an issue in the Github repo or contact me any other way.
-        </p>
-      </div>
-
-      <div className="qna">
         <h2>who made this</h2>
         <p>
-          This app was created by Jenny Lam.
+          This app was created by Jenny Lam. You can contact me at <a href="mailto:jznnylam@gmail.com">jznnylam@gmail.com</a>, 
+          DM me on <a href="https://www.instagram.com/jenny.gif/" target="_blank" rel="noreferrer">Instagram</a>, and/or check out any other links below. 
         </p>
         <p id="contactLinks">
           <a href="https://jenetic.github.io" target="_blank" rel="noreferrer">website</a> |
@@ -41,6 +31,16 @@ const About = () => {
         </p>
       </div>
 
+      <div className="qna">
+        <h2>it's not working</h2>
+        <p>
+          If you leave the website open and lingering around for a long time (over an hour), your Spotify
+          data may not load properly onto the card, but it should work again when you refresh the page (in theory, because I'm still working on this issue).
+        </p>
+        <p>
+          If you find other issues or have any suggestions, you can open an issue in the Github repo or contact me any other way.
+        </p>
+      </div>
     </div>
   )
 }
