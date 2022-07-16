@@ -9,12 +9,12 @@ Try it out at [licensify.herokuapp.com](https://licensify.herokuapp.com/)!
 ## App Contents
 
 ### Login Page
-![Login Page](screenshots/login.png)
+<img src="screenshots/login.png" width="75%">
 
-Users can log in by through authorization with Spotify.
+Users can log in through authorization with Spotify.
 
 ### Personalized Driver License
-![Personalized Driver License](screenshots/card.png)
+<img src="screenshots/card.png" width="75%">
 
 Licensify generates a driver license based on the user's profile data and listening activity based on either the last month, last six months, or from all time. The default time range is six months, but users can pick other time ranges.
 
