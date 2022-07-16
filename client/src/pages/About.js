@@ -10,7 +10,7 @@ const About = () => {
           in the future, but I haven't thought that far yet.
         </p>
         <p>
-          Licensify was made with React.js, Node.js, and Express.js. I used CSS to create the driver license and the
+          Licensify was made with React.js, Node.js, and Express.js. I used React.js and CSS to create the driver license itself and the
           Spotify Web API to retrieve user listening activity from Spotify, as well as authorize Spotify accounts.
         </p>
         <p>
