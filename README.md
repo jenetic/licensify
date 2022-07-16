@@ -33,7 +33,7 @@ Licensify was built with React.js for the frontend and Express.js and Node.js fo
 
 4. Install Node and dependencies. You can run the React app on <http://localhost:3000> and the Node server on <http://localhost:8888>.
 
-```
+```shell
 # Install dependencies
 $ npm install
 

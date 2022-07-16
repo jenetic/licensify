@@ -30,7 +30,9 @@ const Card = ({
           <div id="mainProfilePic" style={{backgroundImage:`url('${noProfilePic}')`}}></div>
         )}
 
-        <p id="signature">{profile.display_name}</p>
+        <div id="signatureWrapper">
+          <p id="signature">{profile.display_name}</p>
+        </div>
       </div>
       
       <p id="licensify">Licensify</p>
