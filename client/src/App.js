@@ -43,7 +43,7 @@ function App() {
       <div id="footerWrapper">
         <p id="footer">
           <span>created by </span>
-          <a href="http://jenetic.github.io" target="_blank" rel="noreferrer">Jenny Lam</a>
+          <a href="http://jenetic.github.io" target="_blank" rel="noreferrer">jenetic (github)</a>
         </p>
       </div>
     </div>
