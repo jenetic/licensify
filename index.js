@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 8888;
 app.use(express.static(path.resolve(__dirname, './client/build')));
 
 app.get('/', (req, res) => {
-  res.send('Hello world');
+  res.send('hi add me on github @jenetic lol');
 });
 
 // Generate random string containing letters and numbers
