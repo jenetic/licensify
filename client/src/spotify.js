@@ -138,7 +138,7 @@ export const getCurrentUserProfile = () => axios.get('/me');
 * https://developer.spotify.com/documentation/web-api/reference/#/operations/get-users-top-artists-and-tracks
 * @returns {Promise}
 */
-export const getTopArtists = (time_range = 'medium_term') => {
+export const getTopArtists = (time_range = 'short_term') => {
   return axios.get(`/me/top/artists?time_range=${time_range}`);
 };
 
@@ -147,7 +147,7 @@ export const getTopArtists = (time_range = 'medium_term') => {
 * https://developer.spotify.com/documentation/web-api/reference/#/operations/get-users-top-artists-and-tracks
 * @returns {Promise}
 */
-const getTopTracks = (time_range = 'medium_term') => {
+const getTopTracks = (time_range = 'short_term') => {
   return axios.get(`/me/top/tracks?time_range=${time_range}`);
 };
 
@@ -156,7 +156,7 @@ const getTopTracks = (time_range = 'medium_term') => {
  * @param {String} time_range 
  * @returns {String} name of top track uppercased
  */
-export const getTopTrackName = async (time_range = 'medium_term') => {
+export const getTopTrackName = async (time_range = 'short_term') => {
   const topTracks = await getTopTracks(time_range);
   return topTracks.data.items[0].name.toUpperCase();
 }
@@ -170,7 +170,7 @@ const getTrack = (trackId) => {
   return axios.get(`/tracks/${trackId}`);
 }
 
-export const getTopTrackAlbumCover = async (time_range = 'medium_term') => {
+export const getTopTrackAlbumCover = async (time_range = 'short_term') => {
   const topTracks = await getTopTracks(time_range);
   const trackId = topTracks.data.items[0].id;
   const track = await getTrack(trackId);
@@ -182,7 +182,7 @@ export const getTopTrackAlbumCover = async (time_range = 'medium_term') => {
  * @param {String} time_range 
  * @returns {String} top artists separated by comma
  */
-export const getTopTrackArtists = async (time_range = 'medium_term') => {
+export const getTopTrackArtists = async (time_range = 'short_term') => {
   const topTracks = await getTopTracks(time_range);
   const artistsList = topTracks.data.items[0].artists;
 
@@ -199,7 +199,7 @@ export const getTopTrackArtists = async (time_range = 'medium_term') => {
  * @param {String} time_range 
  * @returns array of top 3 genres
  */
-export const getTopGenres = async (time_range = 'medium_term') => {
+export const getTopGenres = async (time_range = 'short_term') => {
   const topArtists = await getTopArtists(time_range);
   
   let genreDict = {};

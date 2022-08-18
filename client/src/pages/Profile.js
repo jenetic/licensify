@@ -22,7 +22,7 @@ const Profile = () => {
   const [topTrackAlbumCover, setTopTrackAlbumCover] = useState("");
   const [topGenres, setTopGenres] = useState("");
 
-  const displayCardContents = async (time_range="medium_term", refreshStatus) => {
+  const displayCardContents = async (time_range="short_term", refreshStatus) => {
 
     // Prevent error of loadingRectangle not having loaded in yet when refreshed
     if (!refreshStatus) {
@@ -70,7 +70,7 @@ const Profile = () => {
       const userProfile = await getCurrentUserProfile();
       setProfile(userProfile.data);
 
-      displayCardContents("medium_term", true);
+      displayCardContents("short_term", true);
     }
     catchErrors(fetchUserProfileData());
   }, [])

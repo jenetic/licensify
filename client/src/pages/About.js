@@ -21,8 +21,7 @@ const About = () => {
       <div className="qna">
         <h2>who made this</h2>
         <p>
-          This app was created by Jenny Lam. You can contact me at <a href="mailto:jznnylam@gmail.com">jznnylam@gmail.com</a>, 
-          DM me on <a href="https://www.instagram.com/jenny.gif/" target="_blank" rel="noreferrer">Instagram</a>, and/or check out any other links below. 
+          This app was created by Jenny Lam. You can contact me at <a href="mailto:jznnylam@gmail.com">jznnylam@gmail.com</a> or check out any other links below. 
         </p>
         <p id="contactLinks">
           <a href="https://jenetic.github.io" target="_blank" rel="noreferrer">website</a> |
