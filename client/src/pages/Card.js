@@ -38,7 +38,7 @@ const Card = ({
       <p id="licensify">Licensify</p>
       <p id="country">{profile.country}</p>
       <p id="driverLicense">DRIVER LICENSE</p>
-      <p id="displayTimeRange">FROM LAST 6 MONTHS</p>
+      <p id="displayTimeRange">FROM LAST MONTH</p>
 
       <hr id="topGreenLine"/>
       <hr id="bottomGreenLine"/>
