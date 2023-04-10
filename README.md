@@ -5,6 +5,7 @@ Licensify is a web app that takes a user's Spotify listening activity (top artis
 ## Demo
 
 Try it out at [licensify.herokuapp.com](https://licensify.herokuapp.com/)!
+Edit: Heroku is not free anymore so it doesn't work right now :(
 
 ## App Contents
 
