@@ -24,9 +24,6 @@ As of right now, the app only has one card style (California license), but maybe
 ## Built With
 Licensify was built with React.js for the frontend and Express.js and Node.js for the backend. User authorization with Spotify was implemented using OAuth2 authorization flow and the Spotify Web API. The driver's license itself was created using React.js and CSS and user data was retrieved from the Spotify Web API. 
 
-## Future Tasks
-- [ ] Have app retreive a new access/refresh token when user changes the time range. Right now, this only happens when the page is refreshed but changing the time range doesn't refresh the page. If someone leaves the web app open for over an hour, changing the time range would make the app get stuck on the loading screen until they refresh the page.
-
 ## Development
 1. Register a Spotify App in the Spotify Developer Dashboard and add `http://localhost:8888/callback` as a Redirect URI in the app settings.
 
